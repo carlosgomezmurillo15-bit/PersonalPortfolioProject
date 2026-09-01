@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Carlos Gomez's personal portfolio project."
+    content="Carlos Gomez's personal portfolio featuring web development and information organization projects."
   >
 
   <title>Carlos Gomez | Personal Portfolio</title>
@@ -17,7 +17,9 @@
 
 <body>
   <header class="site-header">
-    <a class="logo" href="#home">CG</a>
+    <a class="logo" href="#home" aria-label="Carlos Gomez homepage">
+      CG
+    </a>
 
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
@@ -32,7 +34,7 @@
 
   <main>
     <section class="hero" id="home">
-      <p class="label">Exercise 03 — Deployment Pipeline</p>
+      <p class="label">Personal Portfolio Project</p>
 
       <h1>Carlos Gomez</h1>
 
@@ -50,14 +52,14 @@
       </a>
     </section>
 
-    <section class="deployment-status">
+    <section class="deployment-status" aria-labelledby="deployment-heading">
       <div class="status-dot" aria-hidden="true"></div>
 
       <div>
-        <h2>Deployment Status</h2>
+        <h2 id="deployment-heading">Deployment Status</h2>
 
         <p>
-          Exercise 03 update successfully published through GitHub Pages.
+          Exercise 04 interactive feature published through GitHub Pages.
         </p>
       </div>
     </section>
@@ -68,8 +70,48 @@
         <h2>Current Projects</h2>
       </div>
 
-      <div class="project-grid">
-        <article class="project-card">
+      <div
+        class="project-filters"
+        role="group"
+        aria-label="Filter projects by category"
+      >
+        <button
+          class="filter-button"
+          type="button"
+          data-filter="all"
+          aria-controls="project-grid"
+          aria-pressed="true"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-button"
+          type="button"
+          data-filter="web"
+          aria-controls="project-grid"
+          aria-pressed="false"
+        >
+          Web Development
+        </button>
+
+        <button
+          class="filter-button"
+          type="button"
+          data-filter="information"
+          aria-controls="project-grid"
+          aria-pressed="false"
+        >
+          Information Organization
+        </button>
+      </div>
+
+      <p class="filter-status" id="filter-status" aria-live="polite">
+        Showing all 3 projects.
+      </p>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-category="web">
           <p class="project-number">01</p>
 
           <h3>Personal Portfolio Project</h3>
@@ -82,7 +124,7 @@
           <p class="tools">HTML · CSS · JavaScript</p>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-category="information">
           <p class="project-number">02</p>
 
           <h3>5K Preparation Knowledge Base</h3>
@@ -96,7 +138,7 @@
           <p class="tools">Markdown · GitHub Pages</p>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-category="web">
           <p class="project-number">03</p>
 
           <h3>Course Portfolio</h3>
@@ -135,7 +177,8 @@
   </main>
 
   <footer>
-    <p>Designed and developed by Carlos ALberto Gomez Murillo.</p>
+    <p>Designed and developed by Carlos Gomez.</p>
+    <p>&copy; <span id="current-year"></span> Carlos Gomez</p>
   </footer>
 </body>
 </html>
