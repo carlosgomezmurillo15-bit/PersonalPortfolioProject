@@ -19,8 +19,11 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <!-- The version number forces GitHub Pages to load the newest CSS -->
+  <link rel="stylesheet" href="./styles.css?v=8">
+
+  <!-- The version number forces GitHub Pages to load the newest JavaScript -->
+  <script src="./script.js?v=8" defer></script>
 </head>
 
 <body>
@@ -35,7 +38,9 @@
         href="#home"
         aria-label="Carlos Gomez portfolio home"
       >
-        <span class="brand-mark" aria-hidden="true">CG</span>
+        <span class="brand-mark" aria-hidden="true">
+          CG
+        </span>
 
         <span class="brand-copy">
           <strong>Carlos Gomez</strong>
@@ -68,13 +73,15 @@
           Computing Applications Student
         </p>
 
-        <h1>Building useful digital experiences.</h1>
+        <h1>
+          Building useful digital experiences.
+        </h1>
 
         <p class="hero-introduction">
-          I’m Carlos Gomez, a Texas Tech University student and U.S. Army
-          Reserve Intelligence Analyst. I’m building this portfolio to share
-          my work in web development, information organization, and technical
-          problem-solving.
+          I’m Carlos Gomez, a Texas Tech University student and U.S.
+          Army Reserve Intelligence Analyst. I’m building this portfolio
+          to share my work in web development, information organization,
+          and technical problem-solving.
         </p>
 
         <div class="hero-actions">
@@ -82,8 +89,8 @@
             Explore my work
           </a>
 
-          <a class="text-link" href="#about">
-            More about me <span aria-hidden="true">→</span>
+          <a class="secondary-button" href="#about">
+            More about me
           </a>
         </div>
 
@@ -94,10 +101,10 @@
         </ul>
       </div>
 
-      <aside class="focus-card" aria-label="Current focus">
+      <aside class="focus-card">
         <div class="focus-card-header">
-          <p>Current focus</p>
-          <span>Portfolio in progress</span>
+          <p>Current Focus</p>
+          <span>In Progress</span>
         </div>
 
         <div class="profile-monogram" aria-hidden="true">
@@ -107,8 +114,8 @@
         <h2>Learning by building.</h2>
 
         <p class="focus-summary">
-          This site will develop throughout the semester as I add stronger
-          projects, case studies, and interactive features.
+          This portfolio will develop throughout the semester as I add
+          stronger projects, case studies, and interactive features.
         </p>
 
         <dl class="focus-list">
@@ -123,7 +130,7 @@
           </div>
 
           <div>
-            <dt>Tools</dt>
+            <dt>Technology</dt>
             <dd>HTML, CSS, JavaScript</dd>
           </div>
         </dl>
@@ -137,17 +144,20 @@
     >
       <div class="section-heading">
         <div>
-          <p class="section-label">Selected work</p>
-          <h2 id="projects-title">Projects I’m building</h2>
+          <p class="section-label">Selected Work</p>
+
+          <h2 id="projects-title">
+            Projects I’m building
+          </h2>
         </div>
 
         <p class="section-description">
-          Use the category buttons to filter the projects without leaving
-          the page.
+          Use the buttons below to filter my projects by category
+          without navigating to another page.
         </p>
       </div>
 
-      <div class="filter-row">
+      <div class="filter-area">
         <div
           class="project-filters"
           role="group"
@@ -160,7 +170,7 @@
             aria-controls="project-grid"
             aria-pressed="true"
           >
-            All projects
+            All Projects
           </button>
 
           <button
@@ -197,39 +207,46 @@
         <article class="project-card" data-category="web">
           <div class="project-card-top">
             <span class="project-number">01</span>
-            <span class="project-category">Web Development</span>
+
+            <span class="project-category">
+              Web Development
+            </span>
           </div>
 
-          <div class="project-card-body">
+          <div class="project-content">
             <h3>Personal Portfolio Project</h3>
 
             <p>
-              A responsive portfolio designed to present my skills,
-              experience, and projects through a clean and interactive
+              A responsive website designed to present my skills,
+              experience, and projects through a clear and interactive
               interface.
             </p>
           </div>
 
-          <ul class="project-tools" aria-label="Technologies used">
+          <ul class="project-tools">
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
           </ul>
 
-          <p class="project-progress">
+          <p class="project-status">
             Currently in development
           </p>
         </article>
 
-        <article class="project-card" data-category="information">
+        <article
+          class="project-card"
+          data-category="information"
+        >
           <div class="project-card-top">
             <span class="project-number">02</span>
+
             <span class="project-category">
               Information Organization
             </span>
           </div>
 
-          <div class="project-card-body">
+          <div class="project-content">
             <h3>5K Preparation Knowledge Base</h3>
 
             <p>
@@ -239,12 +256,12 @@
             </p>
           </div>
 
-          <ul class="project-tools" aria-label="Technologies used">
+          <ul class="project-tools">
             <li>Markdown</li>
             <li>GitHub Pages</li>
           </ul>
 
-          <p class="project-progress">
+          <p class="project-status">
             Completed course project
           </p>
         </article>
@@ -252,26 +269,29 @@
         <article class="project-card" data-category="web">
           <div class="project-card-top">
             <span class="project-number">03</span>
-            <span class="project-category">Web Development</span>
+
+            <span class="project-category">
+              Web Development
+            </span>
           </div>
 
-          <div class="project-card-body">
+          <div class="project-content">
             <h3>Course Portfolio</h3>
 
             <p>
-              A collection of responsive web-development exercises that
-              documents my progress with layouts, media queries, Git, and
-              deployment.
+              A collection of responsive web-development exercises
+              documenting my progress with layouts, media queries,
+              Git, and deployment.
             </p>
           </div>
 
-          <ul class="project-tools" aria-label="Technologies used">
+          <ul class="project-tools">
             <li>HTML</li>
             <li>CSS</li>
             <li>GitHub</li>
           </ul>
 
-          <p class="project-progress">
+          <p class="project-status">
             Completed course project
           </p>
         </article>
@@ -284,7 +304,7 @@
       aria-labelledby="about-title"
     >
       <div class="about-heading">
-        <p class="section-label">About me</p>
+        <p class="section-label">About Me</p>
 
         <h2 id="about-title">
           Technology, analysis, and service.
@@ -297,7 +317,7 @@
           and use.
         </p>
 
-        <p>
+        <p class="about-description">
           I study Computing Applications at Texas Tech University and
           serve in the U.S. Army Reserve as an Intelligence Analyst.
           Those experiences have helped me strengthen my communication,
@@ -305,32 +325,32 @@
         </p>
 
         <div class="strength-grid">
-          <article>
+          <article class="strength-card">
             <span>01</span>
 
-            <h3>Front-end development</h3>
+            <h3>Front-End Development</h3>
 
             <p>
-              Responsive pages built with clear structure and usable
+              Responsive pages built with clear structure and useful
               interactions.
             </p>
           </article>
 
-          <article>
+          <article class="strength-card">
             <span>02</span>
 
-            <h3>Information analysis</h3>
+            <h3>Information Analysis</h3>
 
             <p>
-              Organizing complex material so it can be understood more
-              quickly.
+              Organizing complex material so it can be understood
+              more quickly.
             </p>
           </article>
 
-          <article>
+          <article class="strength-card">
             <span>03</span>
 
-            <h3>Continuous learning</h3>
+            <h3>Continuous Learning</h3>
 
             <p>
               Improving through coursework, technical projects, and
