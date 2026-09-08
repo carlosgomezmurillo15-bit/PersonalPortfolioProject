@@ -1,29 +1,60 @@
-const root = document.documentElement;
+const root =
+  document.documentElement;
 
 const themeButton =
-  document.getElementById("theme-button");
+  document.getElementById(
+    "theme-button"
+  );
 
 const themeLabel =
-  document.getElementById("theme-label");
-
-const filterButtons =
-  document.querySelectorAll(".filter-button");
-
-const projectRows =
-  document.querySelectorAll(".project-row");
-
-const filterStatus =
-  document.getElementById("filter-status");
-
-const comingSoonButtons =
-  document.querySelectorAll("[data-coming-soon]");
+  document.getElementById(
+    "theme-label"
+  );
 
 
+/* =========================
+   DARK / LIGHT MODE
+========================= */
 
-/* DARK / LIGHT MODE */
+function readSavedTheme() {
+
+  try {
+
+    return localStorage.getItem(
+      "portfolio-theme"
+    );
+
+  } catch (error) {
+
+    return null;
+
+  }
+
+}
+
+
+function saveTheme(theme) {
+
+  try {
+
+    localStorage.setItem(
+      "portfolio-theme",
+      theme
+    );
+
+  } catch (error) {
+
+    // The site still works
+    // without local storage.
+
+  }
+
+}
+
 
 const savedTheme =
-  localStorage.getItem("portfolio-theme");
+  readSavedTheme();
+
 
 if (
   savedTheme === "dark" ||
@@ -36,8 +67,12 @@ if (
 }
 
 
-
 function updateThemeText() {
+
+  if (!themeLabel) {
+    return;
+  }
+
 
   if (
     root.dataset.theme === "dark"
@@ -56,58 +91,172 @@ function updateThemeText() {
 }
 
 
-
 updateThemeText();
 
 
+if (themeButton) {
 
-themeButton.addEventListener(
-  "click",
-  function () {
+  themeButton.addEventListener(
+    "click",
+    function () {
 
-    if (
-      root.dataset.theme === "dark"
-    ) {
+      if (
+        root.dataset.theme === "dark"
+      ) {
 
-      root.dataset.theme =
-        "light";
+        root.dataset.theme =
+          "light";
 
-    } else {
+      } else {
 
-      root.dataset.theme =
-        "dark";
+        root.dataset.theme =
+          "dark";
+
+      }
+
+
+      saveTheme(
+        root.dataset.theme
+      );
+
+
+      updateThemeText();
 
     }
+  );
+
+}
 
 
-    localStorage.setItem(
-      "portfolio-theme",
-      root.dataset.theme
-    );
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+const currentPage =
+  window.location.pathname
+    .split("/")
+    .pop() ||
+  "index.html";
 
 
-    updateThemeText();
-
-  }
-);
+let navKey =
+  "home";
 
 
+if (
+  currentPage ===
+  "projects.html"
+) {
 
-/* PROJECT FILTERS */
+  navKey =
+    "projects";
 
-function showAllProjects() {
+}
 
-  projectRows.forEach(
-    function (project) {
 
-      project.style.display =
-        "grid";
+if (
+  currentPage ===
+  "about.html"
+) {
+
+  navKey =
+    "about";
+
+}
+
+
+if (
+  currentPage ===
+  "resume.html"
+) {
+
+  navKey =
+    "resume";
+
+}
+
+
+document
+  .querySelectorAll(
+    "[data-nav]"
+  )
+  .forEach(
+    function (link) {
+
+      if (
+        link.dataset.nav ===
+        navKey
+      ) {
+
+        link.classList.add(
+          "active"
+        );
+
+      }
 
     }
   );
 
 
-  filterButtons.forEach(
+/* =========================
+   COMING SOON BUTTONS
+========================= */
+
+document
+  .querySelectorAll(
+    "[data-coming-soon]"
+  )
+  .forEach(
+    function (button) {
+
+      button.addEventListener(
+        "click",
+        function (event) {
+
+          event.preventDefault();
+
+        }
+      );
+
+    }
+  );
+
+
+/* =========================
+   PROJECT FILTERING
+========================= */
+
+const categoryButtons =
+  document.querySelectorAll(
+    ".category-button"
+  );
+
+
+const categorySections =
+  document.querySelectorAll(
+    "[data-category-section]"
+  );
+
+
+const filterStatus =
+  document.getElementById(
+    "filter-status"
+  );
+
+
+function showAllCategories() {
+
+  categorySections.forEach(
+    function (section) {
+
+      section.hidden =
+        false;
+
+    }
+  );
+
+
+  categoryButtons.forEach(
     function (button) {
 
       button.classList.remove(
@@ -118,21 +267,86 @@ function showAllProjects() {
   );
 
 
-  filterStatus.textContent =
-    "Showing all 4 projects";
+  if (filterStatus) {
+
+    filterStatus.textContent =
+      "Showing the full project library";
+
+  }
 
 }
 
 
+function showCategory(
+  category
+) {
 
-filterButtons.forEach(
+  let categoryName =
+    "";
+
+
+  categoryButtons.forEach(
+    function (button) {
+
+      const isActive =
+        button.dataset.filter ===
+        category;
+
+
+      button.classList.toggle(
+        "active",
+        isActive
+      );
+
+
+      if (isActive) {
+
+        categoryName =
+          button.textContent
+            .replace(
+              /^\d+\s*/,
+              ""
+            )
+            .trim();
+
+      }
+
+    }
+  );
+
+
+  categorySections.forEach(
+    function (section) {
+
+      section.hidden =
+        section.dataset
+          .categorySection !==
+        category;
+
+    }
+  );
+
+
+  if (filterStatus) {
+
+    filterStatus.textContent =
+      "Showing " +
+      categoryName +
+      " projects";
+
+  }
+
+}
+
+
+categoryButtons.forEach(
   function (button) {
 
     button.addEventListener(
       "click",
       function () {
 
-        const filter =
+        const category =
           button.dataset.filter;
 
 
@@ -142,90 +356,128 @@ filterButtons.forEach(
           );
 
 
+        /*
+          Clicking the selected
+          category again returns
+          to every project.
+        */
+
         if (alreadyActive) {
 
-          showAllProjects();
+          showAllCategories();
+
+
+          history.replaceState(
+            {},
+            "",
+            "projects.html"
+          );
+
 
           return;
 
         }
 
 
-        filterButtons.forEach(
-          function (otherButton) {
-
-            otherButton.classList.remove(
-              "active"
-            );
-
-          }
+        showCategory(
+          category
         );
 
 
-        button.classList.add(
-          "active"
-        );
+        /*
+          Add ?skill= to the URL.
+          Example:
+          projects.html?skill=security
+        */
 
-
-        let visibleCount =
-          0;
-
-
-        projectRows.forEach(
-          function (project) {
-
-            if (
-              project.dataset.category ===
-              filter
-            ) {
-
-              project.style.display =
-                "grid";
-
-              visibleCount++;
-
-            } else {
-
-              project.style.display =
-                "none";
-
-            }
-
-          }
-        );
-
-
-        filterStatus.textContent =
-          "Showing " +
-          visibleCount +
-          " project" +
-          (
-            visibleCount === 1
-              ? ""
-              : "s"
+        const url =
+          new URL(
+            window.location.href
           );
 
-      }
-    );
 
-  }
-);
+        url.searchParams.set(
+          "skill",
+          category
+        );
 
 
-
-/* COMING SOON BUTTONS */
-
-comingSoonButtons.forEach(
-  function (button) {
-
-    button.addEventListener(
-      "click",
-      function (event) {
-
-        event.preventDefault();
+        history.replaceState(
+          {},
+          "",
+          url.pathname +
+          "?" +
+          url.searchParams
+            .toString()
+        );
 
       }
     );
 
   }
 );
+
+
+/* =========================
+   DIRECT CATEGORY LINKS
+========================= */
+
+/*
+  This lets links from the
+  homepage open a specific
+  project category.
+
+  Example:
+
+  projects.html?skill=it
+
+  projects.html?skill=security
+
+  projects.html?skill=intelligence
+*/
+
+
+if (
+  categoryButtons.length > 0
+) {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  const requestedSkill =
+    params.get(
+      "skill"
+    );
+
+
+  const validSkills =
+    Array.from(
+      categoryButtons
+    ).map(
+      function (button) {
+
+        return button
+          .dataset
+          .filter;
+
+      }
+    );
+
+
+  if (
+    requestedSkill &&
+    validSkills.includes(
+      requestedSkill
+    )
+  ) {
+
+    showCategory(
+      requestedSkill
+    );
+
+  }
+
+}
