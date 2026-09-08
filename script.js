@@ -1,6 +1,10 @@
 const root = document.documentElement;
-const themeButton = document.querySelector("#theme-button");
-const themeLabel = document.querySelector("#theme-label");
+
+const themeButton =
+  document.getElementById("theme-button");
+
+const themeLabel =
+  document.getElementById("theme-label");
 
 const filterButtons =
   document.querySelectorAll(".filter-button");
@@ -9,102 +13,219 @@ const projectRows =
   document.querySelectorAll(".project-row");
 
 const filterStatus =
-  document.querySelector("#filter-status");
+  document.getElementById("filter-status");
 
-function readSavedTheme() {
-  try {
-    return localStorage.getItem("portfolio-theme");
-  } catch (error) {
-    return null;
+const comingSoonButtons =
+  document.querySelectorAll("[data-coming-soon]");
+
+
+
+/* DARK / LIGHT MODE */
+
+const savedTheme =
+  localStorage.getItem("portfolio-theme");
+
+if (
+  savedTheme === "dark" ||
+  savedTheme === "light"
+) {
+
+  root.dataset.theme =
+    savedTheme;
+
+}
+
+
+
+function updateThemeText() {
+
+  if (
+    root.dataset.theme === "dark"
+  ) {
+
+    themeLabel.textContent =
+      "Light view";
+
+  } else {
+
+    themeLabel.textContent =
+      "Dark view";
+
   }
+
 }
 
-function saveTheme(theme) {
-  try {
-    localStorage.setItem("portfolio-theme", theme);
-  } catch (error) {
-    // The theme still works if browser storage is unavailable.
-  }
-}
 
-function updateThemeButton() {
-  const nextTheme =
-    root.dataset.theme === "dark" ? "light" : "dark";
 
-  const buttonText =
-    nextTheme === "dark" ? "Dark view" : "Light view";
+updateThemeText();
 
-  themeLabel.textContent = buttonText;
 
-  themeButton.setAttribute(
-    "aria-label",
-    `Switch to ${nextTheme} theme`
-  );
-}
 
-const savedTheme = readSavedTheme();
+themeButton.addEventListener(
+  "click",
+  function () {
 
-if (savedTheme === "light" || savedTheme === "dark") {
-  root.dataset.theme = savedTheme;
-}
+    if (
+      root.dataset.theme === "dark"
+    ) {
 
-updateThemeButton();
+      root.dataset.theme =
+        "light";
 
-themeButton.addEventListener("click", () => {
-  const nextTheme =
-    root.dataset.theme === "dark" ? "light" : "dark";
+    } else {
 
-  root.dataset.theme = nextTheme;
+      root.dataset.theme =
+        "dark";
 
-  saveTheme(nextTheme);
-  updateThemeButton();
-});
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const selectedFilter = button.dataset.filter;
-    let visibleProjects = 0;
-
-    filterButtons.forEach((filterButton) => {
-      const isSelected = filterButton === button;
-
-      filterButton.setAttribute(
-        "aria-pressed",
-        String(isSelected)
-      );
-    });
-
-    projectRows.forEach((project) => {
-      const matchesFilter =
-        selectedFilter === "all" ||
-        project.dataset.category === selectedFilter;
-
-      project.hidden = !matchesFilter;
-
-      if (matchesFilter) {
-        visibleProjects += 1;
-
-        project.classList.remove("is-entering");
-
-        void project.offsetWidth;
-
-        project.classList.add("is-entering");
-      }
-    });
-
-    if (selectedFilter === "all") {
-      filterStatus.textContent =
-        `Showing all ${visibleProjects} projects`;
-
-      return;
     }
 
-    const categoryName = button.textContent.trim();
 
-    const projectWord =
-      visibleProjects === 1 ? "project" : "projects";
+    localStorage.setItem(
+      "portfolio-theme",
+      root.dataset.theme
+    );
 
-    filterStatus.textContent =
-      `Showing ${visibleProjects} ${categoryName} ${projectWord}`;
-  });
-});
+
+    updateThemeText();
+
+  }
+);
+
+
+
+/* PROJECT FILTERS */
+
+function showAllProjects() {
+
+  projectRows.forEach(
+    function (project) {
+
+      project.style.display =
+        "grid";
+
+    }
+  );
+
+
+  filterButtons.forEach(
+    function (button) {
+
+      button.classList.remove(
+        "active"
+      );
+
+    }
+  );
+
+
+  filterStatus.textContent =
+    "Showing all 4 projects";
+
+}
+
+
+
+filterButtons.forEach(
+  function (button) {
+
+    button.addEventListener(
+      "click",
+      function () {
+
+        const filter =
+          button.dataset.filter;
+
+
+        const alreadyActive =
+          button.classList.contains(
+            "active"
+          );
+
+
+        if (alreadyActive) {
+
+          showAllProjects();
+
+          return;
+
+        }
+
+
+        filterButtons.forEach(
+          function (otherButton) {
+
+            otherButton.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+
+        button.classList.add(
+          "active"
+        );
+
+
+        let visibleCount =
+          0;
+
+
+        projectRows.forEach(
+          function (project) {
+
+            if (
+              project.dataset.category ===
+              filter
+            ) {
+
+              project.style.display =
+                "grid";
+
+              visibleCount++;
+
+            } else {
+
+              project.style.display =
+                "none";
+
+            }
+
+          }
+        );
+
+
+        filterStatus.textContent =
+          "Showing " +
+          visibleCount +
+          " project" +
+          (
+            visibleCount === 1
+              ? ""
+              : "s"
+          );
+
+      }
+    );
+
+  }
+);
+
+
+
+/* COMING SOON BUTTONS */
+
+comingSoonButtons.forEach(
+  function (button) {
+
+    button.addEventListener(
+      "click",
+      function (event) {
+
+        event.preventDefault();
+
+      }
+    );
+
+  }
+);
