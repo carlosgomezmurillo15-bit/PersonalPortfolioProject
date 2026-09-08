@@ -3,315 +3,648 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta
     name="description"
-    content="Carlos Gomez's personal portfolio featuring web development and information organization projects."
+    content="Carlos Gomez's personal portfolio featuring web development, information organization, and IT support projects."
   >
 
   <title>Carlos Gomez | Personal Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="./style.css?v=11">
-  <script src="./script.js?v=11" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Carlos Gomez portfolio home">
-      <span class="wordmark-initials" aria-hidden="true">CG</span>
+
+    <a class="wordmark" href="#home">
+      <span class="wordmark-initials">CG</span>
       <span>Carlos Gomez</span>
     </a>
 
-    <nav aria-label="Main navigation">
+    <nav>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#next">In Progress</a>
     </nav>
 
     <button class="theme-button" id="theme-button" type="button">
-      <span class="theme-symbol" aria-hidden="true"></span>
+      <span class="theme-symbol"></span>
       <span id="theme-label">Dark view</span>
     </button>
+
   </header>
 
-  <main id="main-content">
+
+  <main>
+
+    <!-- HERO -->
     <section class="hero" id="home">
+
       <div class="hero-topline">
         <p>Personal Portfolio</p>
         <p>Austin, Texas</p>
       </div>
 
+
       <div class="hero-title-wrap">
-        <p class="hero-index" aria-hidden="true">01</p>
+
+        <p class="hero-index">01</p>
 
         <h1>
           <span>Carlos</span>
           <span>Gomez</span>
         </h1>
+
       </div>
 
+
       <div class="hero-bottom">
+
         <p class="hero-role">
           Computing Applications student and U.S. Army Reserve
           Intelligence Analyst.
         </p>
 
+
         <div class="hero-introduction">
+
           <p>
             I create organized digital experiences that make information
             clearer, easier to navigate, and more useful.
           </p>
 
           <a href="#projects">
-            View selected projects
-            <span aria-hidden="true">&#8595;</span>
+            View selected projects ↓
           </a>
+
         </div>
+
       </div>
 
-      <dl class="hero-details">
+
+      <div class="hero-details">
+
         <div>
-          <dt>Education</dt>
-          <dd>Texas Tech University</dd>
+          <span>Education</span>
+          <strong>Texas Tech University</strong>
         </div>
 
         <div>
-          <dt>Focus</dt>
-          <dd>Web, data, and security</dd>
+          <span>Focus</span>
+          <strong>Web, Data, IT & Security</strong>
         </div>
 
         <div>
-          <dt>Building with</dt>
-          <dd>HTML, CSS, and JavaScript</dd>
+          <span>Building With</span>
+          <strong>HTML, CSS, JavaScript & Python</strong>
         </div>
-      </dl>
+
+      </div>
+
     </section>
 
-    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+
+
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
+
       <div class="section-intro">
+
         <p class="section-number">02 / Selected Work</p>
 
         <div>
-          <h2 id="projects-title">Projects</h2>
+
+          <h2>Projects</h2>
+
           <p>
-            A growing collection of coursework and independent work focused
-            on development and information organization.
+            A growing collection of coursework and independent projects
+            focused on web development, information organization, and
+            practical IT work.
           </p>
+
         </div>
+
       </div>
 
+
+
+      <!-- FILTERS -->
       <div class="filter-bar">
+
         <p>Filter by area</p>
 
-        <div
-          class="project-filters"
-          role="group"
-          aria-label="Filter projects by category"
-        >
-          <button
-            class="filter-button"
-            type="button"
-            data-filter="all"
-            aria-controls="project-list"
-            aria-pressed="true"
-          >
-            All Projects
-          </button>
+        <div class="project-filters">
 
           <button
             class="filter-button"
-            type="button"
             data-filter="web"
-            aria-controls="project-list"
-            aria-pressed="false"
+            type="button"
           >
             Web Development
           </button>
 
           <button
             class="filter-button"
-            type="button"
             data-filter="information"
-            aria-controls="project-list"
-            aria-pressed="false"
+            type="button"
           >
             Information Organization
           </button>
+
+          <button
+            class="filter-button"
+            data-filter="it"
+            type="button"
+          >
+            IT Support
+          </button>
+
         </div>
 
-        <p class="filter-status" id="filter-status" aria-live="polite">
-          Showing all 3 projects
+        <p id="filter-status">
+          Showing all 4 projects
         </p>
+
       </div>
 
-      <div class="project-list" id="project-list">
-        <article class="project-row" data-category="web">
+
+
+      <div class="project-list">
+
+
+        <!-- PROJECT 1 -->
+        <article class="project-row" data-category="it">
+
           <p class="project-number">01</p>
 
+
           <div class="project-heading">
-            <p>Web Development</p>
-            <h3>Personal Portfolio Project</h3>
+
+            <p>IT Support</p>
+
+            <h3>
+              ServiceDesk Operations
+            </h3>
+
           </div>
 
+
           <p class="project-description">
-            A responsive portfolio designed to present my skills,
-            experience, and projects through a clear interactive interface.
+
+            A fictional IT support application created to demonstrate how
+            a basic service desk workflow operates. The project organizes
+            support tickets, equipment records, resolution notes, and ticket
+            history within one interface.
+
           </p>
 
+
           <div class="project-meta">
-            <ul aria-label="Technologies used">
+
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>SQLite</li>
+            </ul>
+
+
+            <a
+              class="project-button coming-soon"
+              href="#"
+              data-coming-soon
+            >
+              Live Demo Coming Soon
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 2 -->
+        <article
+          class="project-row"
+          data-category="information"
+        >
+
+          <p class="project-number">02</p>
+
+
+          <div class="project-heading">
+
+            <p>
+              Information Organization
+            </p>
+
+            <h3>
+              5K Preparation Knowledge Base
+            </h3>
+
+          </div>
+
+
+          <p class="project-description">
+
+            An organized knowledge base covering training plans, speed
+            work, strength, recovery, nutrition, and race-day preparation.
+            The project focuses on structuring a larger amount of
+            information so it is easier to browse and use.
+
+          </p>
+
+
+          <div class="project-meta">
+
+            <ul>
+              <li>Markdown</li>
+              <li>Quartz</li>
+              <li>GitHub Pages</li>
+            </ul>
+
+
+            <a
+              class="project-button"
+              href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
+              target="_blank"
+            >
+              Visit Knowledge Base ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 3 -->
+        <article
+          class="project-row"
+          data-category="web"
+        >
+
+          <p class="project-number">03</p>
+
+
+          <div class="project-heading">
+
+            <p>
+              Web Development
+            </p>
+
+            <h3>
+              Course Portfolio
+            </h3>
+
+          </div>
+
+
+          <p class="project-description">
+
+            A collection of CMPA 3304 exercises and projects documenting
+            my progress with HTML, CSS, responsive layouts, interactive
+            elements, navigation, Git, and multi-page website development.
+
+          </p>
+
+
+          <div class="project-meta">
+
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>GitHub</li>
+            </ul>
+
+
+            <a
+              class="project-button"
+              href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
+              target="_blank"
+            >
+              Visit Course Portfolio ↗
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 4 -->
+        <article
+          class="project-row"
+          data-category="web"
+        >
+
+          <p class="project-number">04</p>
+
+
+          <div class="project-heading">
+
+            <p>
+              Web Development
+            </p>
+
+            <h3>
+              Personal Portfolio Project
+            </h3>
+
+          </div>
+
+
+          <p class="project-description">
+
+            The portfolio you are viewing now. It is a responsive personal
+            website built to organize my background, technical focus, and
+            project work in a clean interface that can continue growing as
+            I complete new projects.
+
+          </p>
+
+
+          <div class="project-meta">
+
+            <ul>
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
             </ul>
-            <p>In development</p>
+
+
+            <a
+              class="project-button"
+              href="#home"
+            >
+              Current Site ↑
+            </a>
+
           </div>
+
         </article>
 
-        <article class="project-row" data-category="information">
-          <p class="project-number">02</p>
 
-          <div class="project-heading">
-            <p>Information Organization</p>
-            <h3>5K Preparation Knowledge Base</h3>
-          </div>
-
-          <p class="project-description">
-            An organized collection covering training plans, speed work,
-            strength, recovery, nutrition, and race-day preparation.
-          </p>
-
-          <div class="project-meta">
-            <ul aria-label="Technologies used">
-              <li>Markdown</li>
-              <li>GitHub Pages</li>
-            </ul>
-            <p>Course project</p>
-          </div>
-        </article>
-
-        <article class="project-row" data-category="web">
-          <p class="project-number">03</p>
-
-          <div class="project-heading">
-            <p>Web Development</p>
-            <h3>Course Portfolio</h3>
-          </div>
-
-          <p class="project-description">
-            A collection of responsive development exercises documenting my
-            progress with layouts, media queries, Git, and deployment.
-          </p>
-
-          <div class="project-meta">
-            <ul aria-label="Technologies used">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>GitHub</li>
-            </ul>
-            <p>Course project</p>
-          </div>
-        </article>
       </div>
+
     </section>
 
-    <section class="about-section" id="about" aria-labelledby="about-title">
+
+
+    <!-- ABOUT -->
+    <section
+      class="about-section"
+      id="about"
+    >
+
       <div class="about-label">
-        <p class="section-number">03 / About</p>
-        <p class="about-monogram" aria-hidden="true">CG</p>
+
+        <p class="section-number">
+          03 / About
+        </p>
+
+        <p class="about-monogram">
+          CG
+        </p>
+
       </div>
+
 
       <div class="about-main">
-        <h2 id="about-title">About Me</h2>
+
+        <h2>
+          About Me
+        </h2>
 
         <p class="about-lead">
-          My background combines technology, analysis, organization, and
-          service.
+
+          My background combines technology,
+          analysis, organization, and service.
+
         </p>
+
 
         <p>
-          I study Computing Applications at Texas Tech University and serve
-          in the U.S. Army Reserve as an Intelligence Analyst. These
-          experiences have strengthened the way I research information,
-          communicate findings, solve problems, and work toward a clear goal.
+
+          I study Computing Applications at Texas Tech University and
+          serve in the U.S. Army Reserve as an Intelligence Analyst.
+          These experiences have strengthened the way I research
+          information, communicate findings, solve problems, and work
+          toward a clear goal.
+
         </p>
+
       </div>
 
-      <dl class="about-details">
-        <div>
-          <dt>Education</dt>
-          <dd>B.S. Computing Applications</dd>
-        </div>
+
+      <div class="about-details">
 
         <div>
-          <dt>Experience</dt>
-          <dd>Intelligence and security</dd>
+
+          <span>Education</span>
+
+          <strong>
+            B.S. Computing Applications
+          </strong>
+
         </div>
 
-        <div>
-          <dt>Certifications</dt>
-          <dd>Google Data Analytics and Project Management</dd>
-        </div>
 
         <div>
-          <dt>Interests</dt>
-          <dd>Data analytics, cybersecurity, and web development</dd>
+
+          <span>Experience</span>
+
+          <strong>
+            Intelligence and Security
+          </strong>
+
         </div>
-      </dl>
+
+
+        <div>
+
+          <span>Certifications</span>
+
+          <strong>
+            Google Data Analytics and Project Management
+          </strong>
+
+        </div>
+
+
+        <div>
+
+          <span>Interests</span>
+
+          <strong>
+            Data Analytics, Cybersecurity, IT & Web Development
+          </strong>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="next-section" id="next" aria-labelledby="next-title">
+
+
+    <!-- IN PROGRESS -->
+    <section
+      class="next-section"
+      id="next"
+    >
+
       <div class="section-intro">
-        <p class="section-number">04 / In Progress</p>
+
+        <p class="section-number">
+          04 / In Progress
+        </p>
+
 
         <div>
-          <h2 id="next-title">What I’m Building Next</h2>
+
+          <h2>
+            What I'm Building Next
+          </h2>
+
           <p>
-            These additions will turn the site into a stronger professional
-            portfolio as the semester continues.
+
+            These are projects I plan to complete and add to the portfolio
+            as I build out more hands-on technical work.
+
           </p>
+
         </div>
+
       </div>
 
-      <ol class="next-list">
-        <li>
-          <span>01</span>
-          <h3>Interactive Art Gallery</h3>
-          <p>A gallery visitors can move through without leaving the page.</p>
-        </li>
 
-        <li>
-          <span>02</span>
-          <h3>Career-Focused Project</h3>
-          <p>
-            An original project that demonstrates skills related to the
-            technology, data, or intelligence roles I want to pursue.
-          </p>
-        </li>
 
-        <li>
-          <span>03</span>
-          <h3>Project Case Studies</h3>
+      <div class="next-list">
+
+
+        <article>
+
+          <span>
+            01
+          </span>
+
+          <h3>
+            Active Directory + DNS Lab
+          </h3>
+
           <p>
-            Expanded project pages explaining the goal, process, tools,
-            challenges, and final result.
+
+            A Windows Server lab focused on domain setup, users and groups,
+            DNS checks, and joining a workstation to the domain.
+
           </p>
-        </li>
-      </ol>
+
+          <a
+            class="project-button coming-soon"
+            href="#"
+            data-coming-soon
+          >
+            Coming Soon
+          </a>
+
+        </article>
+
+
+
+        <article>
+
+          <span>
+            02
+          </span>
+
+          <h3>
+            Remote Support Workflow
+          </h3>
+
+          <p>
+
+            A documented troubleshooting workflow showing how I would
+            handle a support request, gather system information, record
+            actions, and close the issue.
+
+          </p>
+
+          <a
+            class="project-button coming-soon"
+            href="#"
+            data-coming-soon
+          >
+            Coming Soon
+          </a>
+
+        </article>
+
+
+
+        <article>
+
+          <span>
+            03
+          </span>
+
+          <h3>
+            Data Analytics Project
+          </h3>
+
+          <p>
+
+            A future project using a real dataset to clean information,
+            analyze results, and present useful findings through a
+            dashboard or report.
+
+          </p>
+
+          <a
+            class="project-button coming-soon"
+            href="#"
+            data-coming-soon
+          >
+            Coming Soon
+          </a>
+
+        </article>
+
+
+      </div>
+
     </section>
+
   </main>
 
+
+
   <footer>
-    <p><strong>Carlos Gomez</strong> / Personal Portfolio</p>
-    <a href="#home">Back to top <span aria-hidden="true">&#8593;</span></a>
+
+    <p>
+      <strong>Carlos Gomez</strong>
+      / Personal Portfolio
+    </p>
+
+    <a href="#home">
+      Back to top ↑
+    </a>
+
   </footer>
+
+
 </body>
 </html>
