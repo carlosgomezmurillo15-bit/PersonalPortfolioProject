@@ -13,7 +13,7 @@ const themeLabel =
 
 
 /* =========================
-   DARK / LIGHT MODE
+   THEME
 ========================= */
 
 function readSavedTheme() {
@@ -44,8 +44,8 @@ function saveTheme(theme) {
 
   } catch (error) {
 
-    // The site still works
-    // without local storage.
+    // Site still works if
+    // local storage is unavailable.
 
   }
 
@@ -74,19 +74,10 @@ function updateThemeText() {
   }
 
 
-  if (
+  themeLabel.textContent =
     root.dataset.theme === "dark"
-  ) {
-
-    themeLabel.textContent =
-      "Light view";
-
-  } else {
-
-    themeLabel.textContent =
-      "Dark view";
-
-  }
+      ? "Light view"
+      : "Dark view";
 
 }
 
@@ -100,19 +91,10 @@ if (themeButton) {
     "click",
     function () {
 
-      if (
+      root.dataset.theme =
         root.dataset.theme === "dark"
-      ) {
-
-        root.dataset.theme =
-          "light";
-
-      } else {
-
-        root.dataset.theme =
-          "dark";
-
-      }
+          ? "light"
+          : "dark";
 
 
       saveTheme(
@@ -151,10 +133,7 @@ if (
   navKey =
     "projects";
 
-}
-
-
-if (
+} else if (
   currentPage ===
   "about.html"
 ) {
@@ -162,10 +141,7 @@ if (
   navKey =
     "about";
 
-}
-
-
-if (
+} else if (
   currentPage ===
   "resume.html"
 ) {
@@ -199,7 +175,7 @@ document
 
 
 /* =========================
-   COMING SOON BUTTONS
+   COMING SOON
 ========================= */
 
 document
@@ -207,9 +183,9 @@ document
     "[data-coming-soon]"
   )
   .forEach(
-    function (button) {
+    function (link) {
 
-      button.addEventListener(
+      link.addEventListener(
         "click",
         function (event) {
 
@@ -223,7 +199,7 @@ document
 
 
 /* =========================
-   PROJECT FILTERING
+   PROJECT FILTERS
 ========================= */
 
 const categoryButtons =
@@ -331,13 +307,14 @@ function showCategory(
 
     filterStatus.textContent =
       "Showing " +
-      categoryName +
-      " projects";
+      categoryName;
 
   }
 
 }
 
+
+/* FILTER BUTTON CLICKS */
 
 categoryButtons.forEach(
   function (button) {
@@ -357,9 +334,8 @@ categoryButtons.forEach(
 
 
         /*
-          Clicking the selected
-          category again returns
-          to every project.
+          Click selected filter again
+          to show everything.
         */
 
         if (alreadyActive) {
@@ -385,7 +361,8 @@ categoryButtons.forEach(
 
 
         /*
-          Add ?skill= to the URL.
+          Update URL.
+
           Example:
           projects.html?skill=security
         */
@@ -423,17 +400,13 @@ categoryButtons.forEach(
 ========================= */
 
 /*
-  This lets links from the
-  homepage open a specific
-  project category.
-
-  Example:
-
-  projects.html?skill=it
+  Allows links such as:
 
   projects.html?skill=security
 
   projects.html?skill=intelligence
+
+  projects.html?skill=coursework
 */
 
 
