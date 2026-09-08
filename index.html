@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Carlos Gomez's personal portfolio featuring web development, information organization, and IT support projects."
+    content="Carlos Gomez personal and technical portfolio."
   >
 
   <title>Carlos Gomez | Personal Portfolio</title>
@@ -25,612 +25,536 @@
 
 <body>
 
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
   <header class="site-header">
 
-    <a class="wordmark" href="#home">
+    <a class="wordmark" href="index.html">
       <span class="wordmark-initials">CG</span>
       <span>Carlos Gomez</span>
     </a>
 
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#next">In Progress</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="resume.html" data-nav="resume">Résumé</a>
     </nav>
 
-    <button class="theme-button" id="theme-button" type="button">
+    <button
+      class="theme-button"
+      id="theme-button"
+      type="button"
+    >
       <span class="theme-symbol"></span>
       <span id="theme-label">Dark view</span>
     </button>
 
   </header>
 
-
-  <main>
+  <main id="main-content">
 
     <!-- HERO -->
-    <section class="hero" id="home">
+    <section class="home-hero">
 
-      <div class="hero-topline">
-        <p>Personal Portfolio</p>
-        <p>Austin, Texas</p>
-      </div>
+      <div class="hero-copy">
 
-
-      <div class="hero-title-wrap">
-
-        <p class="hero-index">01</p>
+        <p class="eyebrow">
+          Personal Portfolio / Austin, Texas
+        </p>
 
         <h1>
           <span>Carlos</span>
           <span>Gomez</span>
         </h1>
 
-      </div>
-
-
-      <div class="hero-bottom">
-
         <p class="hero-role">
           Computing Applications student and U.S. Army Reserve
           Intelligence Analyst.
         </p>
 
+        <p class="hero-summary">
+          I’m building a portfolio that connects web development,
+          IT support, cybersecurity, data, and intelligence work
+          in one organized place.
+        </p>
 
-        <div class="hero-introduction">
+        <div class="hero-actions">
 
-          <p>
-            I create organized digital experiences that make information
-            clearer, easier to navigate, and more useful.
-          </p>
+          <a
+            class="primary-button"
+            href="projects.html"
+          >
+            Explore Projects
+            <span>↗</span>
+          </a>
 
-          <a href="#projects">
-            View selected projects ↓
+          <a
+            class="text-link"
+            href="resume.html"
+          >
+            View Résumé →
           </a>
 
         </div>
 
       </div>
 
+      <!-- FEATURED PROJECT -->
+      <aside class="featured-build">
 
-      <div class="hero-details">
-
-        <div>
-          <span>Education</span>
-          <strong>Texas Tech University</strong>
+        <div class="featured-label">
+          <span class="status-dot"></span>
+          Featured Build
         </div>
 
-        <div>
-          <span>Focus</span>
-          <strong>Web, Data, IT & Security</strong>
-        </div>
-
-        <div>
-          <span>Building With</span>
-          <strong>HTML, CSS, JavaScript & Python</strong>
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- PROJECTS -->
-    <section class="projects-section" id="projects">
-
-      <div class="section-intro">
-
-        <p class="section-number">02 / Selected Work</p>
-
-        <div>
-
-          <h2>Projects</h2>
-
-          <p>
-            A growing collection of coursework and independent projects
-            focused on web development, information organization, and
-            practical IT work.
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-      <!-- FILTERS -->
-      <div class="filter-bar">
-
-        <p>Filter by area</p>
-
-        <div class="project-filters">
-
-          <button
-            class="filter-button"
-            data-filter="web"
-            type="button"
-          >
-            Web Development
-          </button>
-
-          <button
-            class="filter-button"
-            data-filter="information"
-            type="button"
-          >
-            Information Organization
-          </button>
-
-          <button
-            class="filter-button"
-            data-filter="it"
-            type="button"
-          >
-            IT Support
-          </button>
-
-        </div>
-
-        <p id="filter-status">
-          Showing all 4 projects
+        <p class="featured-type">
+          IT Support / Interactive Demo
         </p>
-
-      </div>
-
-
-
-      <div class="project-list">
-
-
-        <!-- PROJECT 1 -->
-        <article class="project-row" data-category="it">
-
-          <p class="project-number">01</p>
-
-
-          <div class="project-heading">
-
-            <p>IT Support</p>
-
-            <h3>
-              ServiceDesk Operations
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-
-            A fictional IT support application created to demonstrate how
-            a basic service desk workflow operates. The project organizes
-            support tickets, equipment records, resolution notes, and ticket
-            history within one interface.
-
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Python</li>
-              <li>SQLite</li>
-            </ul>
-
-
-            <a
-              class="project-button coming-soon"
-              href="#"
-              data-coming-soon
-            >
-              Live Demo Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 2 -->
-        <article
-          class="project-row"
-          data-category="information"
-        >
-
-          <p class="project-number">02</p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Information Organization
-            </p>
-
-            <h3>
-              5K Preparation Knowledge Base
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-
-            An organized knowledge base covering training plans, speed
-            work, strength, recovery, nutrition, and race-day preparation.
-            The project focuses on structuring a larger amount of
-            information so it is easier to browse and use.
-
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-              <li>Markdown</li>
-              <li>Quartz</li>
-              <li>GitHub Pages</li>
-            </ul>
-
-
-            <a
-              class="project-button"
-              href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
-              target="_blank"
-            >
-              Visit Knowledge Base ↗
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 3 -->
-        <article
-          class="project-row"
-          data-category="web"
-        >
-
-          <p class="project-number">03</p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Web Development
-            </p>
-
-            <h3>
-              Course Portfolio
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-
-            A collection of CMPA 3304 exercises and projects documenting
-            my progress with HTML, CSS, responsive layouts, interactive
-            elements, navigation, Git, and multi-page website development.
-
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>GitHub</li>
-            </ul>
-
-
-            <a
-              class="project-button"
-              href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
-              target="_blank"
-            >
-              Visit Course Portfolio ↗
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- PROJECT 4 -->
-        <article
-          class="project-row"
-          data-category="web"
-        >
-
-          <p class="project-number">04</p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Web Development
-            </p>
-
-            <h3>
-              Personal Portfolio Project
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-
-            The portfolio you are viewing now. It is a responsive personal
-            website built to organize my background, technical focus, and
-            project work in a clean interface that can continue growing as
-            I complete new projects.
-
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-
-
-            <a
-              class="project-button"
-              href="#home"
-            >
-              Current Site ↑
-            </a>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ABOUT -->
-    <section
-      class="about-section"
-      id="about"
-    >
-
-      <div class="about-label">
-
-        <p class="section-number">
-          03 / About
-        </p>
-
-        <p class="about-monogram">
-          CG
-        </p>
-
-      </div>
-
-
-      <div class="about-main">
 
         <h2>
-          About Me
+          ServiceDesk Operations
         </h2>
 
-        <p class="about-lead">
-
-          My background combines technology,
-          analysis, organization, and service.
-
+        <p>
+          A fictional service-desk application for managing
+          support tickets, linking equipment, preserving
+          ticket history, and reviewing support activity.
         </p>
 
+        <div class="feature-facts">
+
+          <div>
+            <span>Workflow</span>
+            <strong>Tickets + Assets</strong>
+          </div>
+
+          <div>
+            <span>Backend</span>
+            <strong>Python + SQLite</strong>
+          </div>
+
+          <div>
+            <span>Status</span>
+            <strong>Deployment Pending</strong>
+          </div>
+
+        </div>
+
+        <a
+          class="coming-button"
+          href="#"
+          data-coming-soon
+        >
+
+          <span>
+            <small>Live demo</small>
+            Coming Soon
+          </span>
+
+          <span class="button-icon">
+            ↗
+          </span>
+
+        </a>
+
+      </aside>
+
+    </section>
+
+    <!-- QUICK INFO -->
+    <section class="home-strip">
+
+      <div>
+        <span>Education</span>
+        <strong>Texas Tech University</strong>
+      </div>
+
+      <div>
+        <span>Military</span>
+        <strong>Intelligence Analyst · 35F</strong>
+      </div>
+
+      <div>
+        <span>Technical Focus</span>
+        <strong>IT · Cyber · Web · Data</strong>
+      </div>
+
+      <div>
+        <span>Communication</span>
+        <strong>English + Spanish</strong>
+      </div>
+
+    </section>
+
+    <!-- TECHNICAL FOCUS -->
+    <section class="home-section">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p class="section-number">
+            01 / Areas
+          </p>
+
+          <h2>
+            Technical Focus
+          </h2>
+
+        </div>
 
         <p>
-
-          I study Computing Applications at Texas Tech University and
-          serve in the U.S. Army Reserve as an Intelligence Analyst.
-          These experiences have strengthened the way I research
-          information, communicate findings, solve problems, and work
-          toward a clear goal.
-
+          The portfolio is organized by the areas I am actively
+          developing. Some already contain finished work while
+          others will grow as I complete labs and case studies.
         </p>
 
       </div>
 
+      <div class="skill-grid">
 
-      <div class="about-details">
+        <a
+          class="skill-card"
+          href="projects.html?skill=it"
+        >
 
-        <div>
+          <span>01</span>
 
-          <span>Education</span>
+          <h3>
+            IT Support
+          </h3>
 
-          <strong>
-            B.S. Computing Applications
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>Experience</span>
-
-          <strong>
-            Intelligence and Security
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>Certifications</span>
+          <p>
+            Service desk workflows, troubleshooting,
+            systems support, and documentation.
+          </p>
 
           <strong>
-            Google Data Analytics and Project Management
+            3 Projects →
           </strong>
 
-        </div>
+        </a>
 
+        <a
+          class="skill-card"
+          href="projects.html?skill=data"
+        >
 
-        <div>
+          <span>02</span>
 
-          <span>Interests</span>
+          <h3>
+            Data Analytics
+          </h3>
+
+          <p>
+            Cleaning, analysis, dashboards, and
+            decision-focused reporting.
+          </p>
 
           <strong>
-            Data Analytics, Cybersecurity, IT & Web Development
+            Explore →
           </strong>
 
-        </div>
+        </a>
+
+        <a
+          class="skill-card"
+          href="projects.html?skill=security"
+        >
+
+          <span>03</span>
+
+          <h3>
+            Cybersecurity
+          </h3>
+
+          <p>
+            Security concepts, career research,
+            technical labs, and future case studies.
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+        <a
+          class="skill-card"
+          href="projects.html?skill=networking"
+        >
+
+          <span>04</span>
+
+          <h3>
+            Networking
+          </h3>
+
+          <p>
+            DNS, domains, network fundamentals,
+            connectivity, and infrastructure.
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+        <a
+          class="skill-card"
+          href="projects.html?skill=intelligence"
+        >
+
+          <span>05</span>
+
+          <h3>
+            Intelligence
+          </h3>
+
+          <p>
+            Research, reporting, modernization
+            analysis, and structured information.
+          </p>
+
+          <strong>
+            Explore →
+          </strong>
+
+        </a>
+
+        <a
+          class="skill-card"
+          href="projects.html?skill=web"
+        >
+
+          <span>06</span>
+
+          <h3>
+            Web Development
+          </h3>
+
+          <p>
+            Responsive websites, information architecture,
+            GitHub Pages, and front-end work.
+          </p>
+
+          <strong>
+            3 Projects →
+          </strong>
+
+        </a>
 
       </div>
 
     </section>
 
+    <!-- CURRENT PROJECTS -->
+    <section class="home-section">
 
-
-    <!-- IN PROGRESS -->
-    <section
-      class="next-section"
-      id="next"
-    >
-
-      <div class="section-intro">
-
-        <p class="section-number">
-          04 / In Progress
-        </p>
-
+      <div class="section-heading">
 
         <div>
 
-          <h2>
-            What I'm Building Next
-          </h2>
-
-          <p>
-
-            These are projects I plan to complete and add to the portfolio
-            as I build out more hands-on technical work.
-
+          <p class="section-number">
+            02 / Selected Work
           </p>
+
+          <h2>
+            Current Projects
+          </h2>
 
         </div>
 
+        <p>
+          A few projects already have enough work behind
+          them to show now. The full project library lives
+          on its own page.
+        </p>
+
       </div>
 
+      <div class="featured-project-grid">
 
+        <!-- SERVICE DESK -->
+        <article class="project-card">
 
-      <div class="next-list">
-
-
-        <article>
-
-          <span>
-            01
-          </span>
+          <p class="project-type">
+            IT Support
+          </p>
 
           <h3>
-            Active Directory + DNS Lab
+            ServiceDesk Operations
           </h3>
 
           <p>
-
-            A Windows Server lab focused on domain setup, users and groups,
-            DNS checks, and joining a workstation to the domain.
-
+            A service-desk demo centered on tickets,
+            assets, issue resolution, and support
+            documentation.
           </p>
 
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQLite</li>
+          </ul>
+
           <a
-            class="project-button coming-soon"
+            class="coming-button compact"
             href="#"
             data-coming-soon
           >
-            Coming Soon
+
+            <span>
+              Live Demo Coming Soon
+            </span>
+
+            <span class="button-icon">
+              ↗
+            </span>
+
           </a>
 
         </article>
 
+        <!-- KNOWLEDGE BASE -->
+        <article class="project-card">
 
-
-        <article>
-
-          <span>
-            02
-          </span>
+          <p class="project-type">
+            Information Organization / Web
+          </p>
 
           <h3>
-            Remote Support Workflow
+            5K Preparation Knowledge Base
           </h3>
 
           <p>
-
-            A documented troubleshooting workflow showing how I would
-            handle a support request, gather system information, record
-            actions, and close the issue.
-
+            A structured knowledge base covering training,
+            recovery, nutrition, speed work, and race
+            preparation.
           </p>
 
+          <ul class="tag-list">
+            <li>Markdown</li>
+            <li>Quartz</li>
+            <li>GitHub Pages</li>
+          </ul>
+
           <a
-            class="project-button coming-soon"
-            href="#"
-            data-coming-soon
+            class="project-link"
+            href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Coming Soon
+            Visit Knowledge Base ↗
           </a>
 
         </article>
 
+        <!-- COURSE PORTFOLIO -->
+        <article class="project-card">
 
-
-        <article>
-
-          <span>
-            03
-          </span>
+          <p class="project-type">
+            Web Development
+          </p>
 
           <h3>
-            Data Analytics Project
+            Course Portfolio
           </h3>
 
           <p>
-
-            A future project using a real dataset to clean information,
-            analyze results, and present useful findings through a
-            dashboard or report.
-
+            A collection of course exercises documenting
+            responsive layouts, navigation, Git, deployment,
+            and front-end development.
           </p>
 
+          <ul class="tag-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub</li>
+          </ul>
+
           <a
-            class="project-button coming-soon"
-            href="#"
-            data-coming-soon
+            class="project-link"
+            href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Coming Soon
+            Visit Course Portfolio ↗
           </a>
 
         </article>
 
+      </div>
+
+      <div class="section-action">
+
+        <a
+          class="primary-button"
+          href="projects.html"
+        >
+          View Full Project Library →
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- BACKGROUND -->
+    <section class="home-section split-section">
+
+      <div>
+
+        <p class="section-number">
+          03 / Background
+        </p>
+
+        <h2>
+          Technology, analysis,
+          and operations.
+        </h2>
+
+      </div>
+
+      <div class="split-copy">
+
+        <p>
+          My background spans intelligence reporting,
+          security operations, leadership, and computing
+          coursework. The goal of this portfolio is to show
+          how those areas connect through practical
+          technical work.
+        </p>
+
+        <div class="split-links">
+
+          <a
+            class="text-link"
+            href="about.html"
+          >
+            Read About Me →
+          </a>
+
+          <a
+            class="text-link"
+            href="resume.html"
+          >
+            View Résumé →
+          </a>
+
+        </div>
 
       </div>
 
     </section>
 
   </main>
-
-
 
   <footer>
 
@@ -639,12 +563,11 @@
       / Personal Portfolio
     </p>
 
-    <a href="#home">
-      Back to top ↑
-    </a>
+    <p>
+      Built with HTML, CSS & JavaScript
+    </p>
 
   </footer>
-
 
 </body>
 </html>
