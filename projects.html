@@ -1,1 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="Technical projects by Carlos Gomez."
+  >
+
+  <title>Projects | Carlos Gomez</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to content
+  </a>
+
+  <header class="site-header">
+
+    <a class="wordmark" href="index.html">
+      <span class="wordmark-initials">CG</span>
+      <span>Carlos Gomez</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="resume.html" data-nav="resume">Résumé</a>
+    </nav>
+
+    <button
+      class="theme-button"
+      id="theme-button"
+      type="button"
+    >
+      <span class="theme-symbol"></span>
+      <span id="theme-label">Dark view</span>
+    </button>
+
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero">
+
+      <p class="eyebrow">
+        01 / Project Library
+      </p>
+
+      <h1 class="page-title">
+        Projects.
+      </h1>
+
+      <div class="page-hero-bottom">
+
+        <p>
+          Technical work organized by skill area. Finished work
+          links out when a public version exists. Planned labs
+          stay clearly marked until they are actually completed.
+        </p>
+
+        <p class="page-count">
+          06 Skill Areas
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="project-library">
+
+      <!-- FILTERS -->
+      <div class="filter-panel">
+
+        <div>
+
+          <p class="filter-label">
+            Browse by skill
+          </p>
+
+          <p class="filter-help">
+            Select a category. Click the active category
+            again to return to the full project library.
+          </p>
+
+        </div>
+
+        <div class="category-filters">
+
+          <button
+            class="category-button"
+            data-filter="it"
+          >
+            01 IT Support
+          </button>
+
+          <button
+            class="category-button"
+            data-filter="data"
+          >
+            02 Data Analytics
+          </button>
+
+          <button
+            class="category-button"
+            data-filter="security"
+          >
+            03 Cybersecurity
+          </button>
+
+          <button
+            class="category-button"
+            data-filter="networking"
+          >
+            04 Networking
+          </button>
+
+          <button
+            class="category-button"
+            data-filter="intelligence"
+          >
+            05 Intelligence
+          </button>
+
+          <button
+            class="category-button"
+            data-filter="web"
+          >
+            06 Web Development
+          </button>
+
+        </div>
+
+      </div>
+
+      <p
+        class="filter-status"
+        id="filter-status"
+      >
+        Showing the full project library
+      </p>
+
+      <!-- IT SUPPORT -->
+      <section
+        class="project-category"
+        data-category-section="it"
+      >
+
+        <div class="category-heading">
+
+          <span>01</span>
+
+          <div>
+
+            <p>
+              IT Support
+            </p>
+
+            <h2>
+              Support systems & troubleshooting.
+            </h2>
+
+          </div>
+
+          <p>
+            3 Projects
+          </p>
+
+        </div>
+
+        <!-- SERVICE DESK -->
+        <article class="project-row">
+
+          <div class="project-index">
+            01.1
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Interactive Demo / Deployment Pending
+            </p>
+
+            <h3>
+              ServiceDesk Operations
+            </h3>
+
+            <p>
+              Create and resolve support tickets, link equipment,
+              preserve ticket history, and review service activity.
+              The local demonstration also includes a small
+              Python and SQLite backend.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Target Role
+            </span>
+
+            <strong>
+              Service Desk Analyst
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Live Demo Coming Soon
+              </span>
+
+              <span class="button-icon">
+                ↗
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- ACTIVE DIRECTORY -->
+        <article class="project-row">
+
+          <div class="project-index">
+            01.2
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Lab / Environment Pending
+            </p>
+
+            <h3>
+              Active Directory + DNS
+            </h3>
+
+            <p>
+              A Windows Server lab planned around forest
+              installation, user and group provisioning,
+              DNS validation, and documenting a workstation
+              joining the domain.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Target Role
+            </span>
+
+            <strong>
+              Junior Systems Administrator
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Lab Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- REMOTE SUPPORT -->
+        <article class="project-row">
+
+          <div class="project-index">
+            01.3
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Lab / Environment Pending
+            </p>
+
+            <h3>
+              Remote Support Workflow
+            </h3>
+
+            <p>
+              A documented support workflow focused on
+              user consent, troubleshooting notes,
+              escalation detail, and a read-only
+              Windows diagnostic script.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Target Role
+            </span>
+
+            <strong>
+              Desktop Support Technician
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Workflow Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- DATA -->
+      <section
+        class="project-category"
+        data-category-section="data"
+      >
+
+        <div class="category-heading">
+
+          <span>02</span>
+
+          <div>
+
+            <p>
+              Data Analytics
+            </p>
+
+            <h2>
+              Analysis & reporting.
+            </h2>
+
+          </div>
+
+          <p>
+            In Development
+          </p>
+
+        </div>
+
+        <article class="project-row">
+
+          <div class="project-index">
+            02.1
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Planned Case Study
+            </p>
+
+            <h3>
+              Data Analytics Project
+            </h3>
+
+            <p>
+              A future project using a real dataset to clean
+              information, analyze results, and communicate
+              useful findings through a dashboard or report.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Focus
+            </span>
+
+            <strong>
+              Cleaning · Analysis · Visualization
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Project Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- CYBERSECURITY -->
+      <section
+        class="project-category"
+        data-category-section="security"
+      >
+
+        <div class="category-heading">
+
+          <span>03</span>
+
+          <div>
+
+            <p>
+              Cybersecurity
+            </p>
+
+            <h2>
+              Security research & future labs.
+            </h2>
+
+          </div>
+
+          <p>
+            In Development
+          </p>
+
+        </div>
+
+        <!-- CAREER GUIDE -->
+        <article class="project-row">
+
+          <div class="project-index">
+            03.1
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Information Curation / Current Coursework
+            </p>
+
+            <h3>
+              Army Technology & Cybersecurity Career Guide
+            </h3>
+
+            <p>
+              A curated resource project focused on technology
+              education, certification pathways, military
+              education benefits, and civilian IT and
+              cybersecurity career resources for soldiers.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Focus
+            </span>
+
+            <strong>
+              Cyber Careers · Education · Research
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Site Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- CYBER LAB -->
+        <article class="project-row">
+
+          <div class="project-index">
+            03.2
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Planned Lab
+            </p>
+
+            <h3>
+              Cybersecurity Lab
+            </h3>
+
+            <p>
+              This section is reserved for a documented
+              hands-on security project once the environment,
+              testing process, and evidence are complete.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Status
+            </span>
+
+            <strong>
+              Environment Not Yet Published
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Lab Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- NETWORKING -->
+      <section
+        class="project-category"
+        data-category-section="networking"
+      >
+
+        <div class="category-heading">
+
+          <span>04</span>
+
+          <div>
+
+            <p>
+              Networking
+            </p>
+
+            <h2>
+              Infrastructure & connectivity.
+            </h2>
+
+          </div>
+
+          <p>
+            In Development
+          </p>
+
+        </div>
+
+        <article class="project-row">
+
+          <div class="project-index">
+            04.1
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Planned Lab
+            </p>
+
+            <h3>
+              Networking Fundamentals Lab
+            </h3>
+
+            <p>
+              A future lab for documenting addressing,
+              connectivity, DNS checks, troubleshooting
+              steps, and basic network validation.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Focus
+            </span>
+
+            <strong>
+              DNS · Connectivity · Troubleshooting
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Lab Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- INTELLIGENCE -->
+      <section
+        class="project-category"
+        data-category-section="intelligence"
+      >
+
+        <div class="category-heading">
+
+          <span>05</span>
+
+          <div>
+
+            <p>
+              Intelligence
+            </p>
+
+            <h2>
+              Research, analysis & communication.
+            </h2>
+
+          </div>
+
+          <p>
+            1 Current Project
+          </p>
+
+        </div>
+
+        <article class="project-row">
+
+          <div class="project-index">
+            05.1
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Academic Analysis
+            </p>
+
+            <h3>
+              Modernizing Military Intelligence
+            </h3>
+
+            <p>
+              An organizational-change analysis examining
+              the Army’s movement toward faster, data-driven,
+              and technology-enabled intelligence operations.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Focus
+            </span>
+
+            <strong>
+              Research · Analysis · Briefing
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="coming-button compact"
+              href="#"
+              data-coming-soon
+            >
+
+              <span>
+                Case Study Coming Soon
+              </span>
+
+              <span class="button-icon">
+                +
+              </span>
+
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- WEB -->
+      <section
+        class="project-category"
+        data-category-section="web"
+      >
+
+        <div class="category-heading">
+
+          <span>06</span>
+
+          <div>
+
+            <p>
+              Web Development
+            </p>
+
+            <h2>
+              Interfaces & information systems.
+            </h2>
+
+          </div>
+
+          <p>
+            3 Projects
+          </p>
+
+        </div>
+
+        <!-- PERSONAL PORTFOLIO -->
+        <article class="project-row">
+
+          <div class="project-index">
+            06.1
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Current Portfolio
+            </p>
+
+            <h3>
+              Personal Portfolio Project
+            </h3>
+
+            <p>
+              A responsive multi-page website designed to
+              organize my technical work, background,
+              projects, and résumé in one professional
+              interface.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Tools
+            </span>
+
+            <strong>
+              HTML · CSS · JavaScript
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="project-link button-link"
+              href="index.html"
+            >
+              View Home →
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- KNOWLEDGE BASE -->
+        <article class="project-row">
+
+          <div class="project-index">
+            06.2
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Course Project
+            </p>
+
+            <h3>
+              5K Preparation Knowledge Base
+            </h3>
+
+            <p>
+              An organized information system covering
+              training plans, speed work, strength, recovery,
+              nutrition, and race-day preparation.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Tools
+            </span>
+
+            <strong>
+              Markdown · Quartz · GitHub Pages
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="project-link button-link"
+              href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Project ↗
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- COURSE PORTFOLIO -->
+        <article class="project-row">
+
+          <div class="project-index">
+            06.3
+          </div>
+
+          <div class="project-main">
+
+            <p class="project-kicker">
+              Course Portfolio
+            </p>
+
+            <h3>
+              CMPA Course Portfolio
+            </h3>
+
+            <p>
+              A collection of responsive development
+              exercises showing layouts, media queries,
+              navigation, Git, deployment, and continued
+              front-end development.
+            </p>
+
+          </div>
+
+          <div class="project-role">
+
+            <span>
+              Tools
+            </span>
+
+            <strong>
+              HTML · CSS · JavaScript · GitHub
+            </strong>
+
+          </div>
+
+          <div class="project-action">
+
+            <a
+              class="project-link button-link"
+              href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Project ↗
+            </a>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <strong>Carlos Gomez</strong>
+      / Projects
+    </p>
+
+    <a href="index.html">
+      Back Home ↑
+    </a>
+
+  </footer>
+
+</body>
+</html>
