@@ -46,8 +46,8 @@ function saveTheme(theme) {
 
   } catch (error) {
 
-    // The site still works
-    // without local storage.
+    // Site still works without
+    // browser storage.
 
   }
 
@@ -113,7 +113,7 @@ if (themeButton) {
 
 
 /* =========================
-   ACTIVE NAV
+   ACTIVE NAVIGATION
 ========================= */
 
 const currentPage =
@@ -128,21 +128,24 @@ let currentNav =
 
 
 if (
-  currentPage === "projects.html"
+  currentPage ===
+  "projects.html"
 ) {
 
   currentNav =
     "projects";
 
 } else if (
-  currentPage === "about.html"
+  currentPage ===
+  "about.html"
 ) {
 
   currentNav =
     "about";
 
 } else if (
-  currentPage === "resume.html"
+  currentPage ===
+  "resume.html"
 ) {
 
   currentNav =
@@ -168,6 +171,30 @@ document
         );
 
       }
+
+    }
+  );
+
+
+/* =========================
+   COMING SOON BUTTONS
+========================= */
+
+document
+  .querySelectorAll(
+    "[data-coming-soon]"
+  )
+  .forEach(
+    function (button) {
+
+      button.addEventListener(
+        "click",
+        function (event) {
+
+          event.preventDefault();
+
+        }
+      );
 
     }
   );
@@ -302,7 +329,7 @@ filterButtons.forEach(
 
 
 /* =========================
-   DIRECT PROJECT LINKS
+   DIRECT CATEGORY LINKS
 ========================= */
 
 if (
@@ -316,7 +343,9 @@ if (
 
 
   const requestedCategory =
-    params.get("skill");
+    params.get(
+      "skill"
+    );
 
 
   const validCategories = [
