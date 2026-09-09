@@ -1,781 +1,348 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carlos Gomez's portfolio in cybersecurity, intelligence analysis, and technical project work.">
+  <title>Carlos Gomez | Cybersecurity &amp; Intelligence</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
-  <meta
-    name="description"
-    content="Carlos Gomez cybersecurity and intelligence analysis portfolio."
-  >
-
-  <title>
-    Carlos Gomez | Cybersecurity & Intelligence
-  </title>
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-  <script
-    src="script.js"
-    defer
-  ></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
-    Skip to content
-  </a>
-
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-
-    <a
-      class="wordmark"
-      href="index.html"
-    >
-
-      <span class="wordmark-initials">
-        CG
-      </span>
-
-      <span>
-        Carlos Gomez
-      </span>
-
+    <a class="wordmark" href="index.html" aria-label="Carlos Gomez home">
+      <span class="wordmark-mark" aria-hidden="true">CG</span>
+      <span class="wordmark-text">Carlos Gomez</span>
     </a>
 
-
-    <nav aria-label="Main navigation">
-
-      <a
-        href="index.html"
-        data-nav="home"
-      >
-        Home
-      </a>
-
-      <a
-        href="projects.html"
-        data-nav="projects"
-      >
-        Projects
-      </a>
-
-      <a
-        href="about.html"
-        data-nav="about"
-      >
-        About
-      </a>
-
-      <a
-        href="resume.html"
-        data-nav="resume"
-      >
-        Resume
-      </a>
-
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="resume.html" data-nav="resume">Resume</a>
     </nav>
-
 
     <button
       class="theme-button"
       id="theme-button"
       type="button"
+      aria-label="Switch to dark theme"
     >
-
-      <span
-        class="theme-symbol"
-        aria-hidden="true"
-      ></span>
-
-      <span id="theme-label">
-        Dark view
-      </span>
-
+      <span class="theme-dot" aria-hidden="true"></span>
+      <span id="theme-label">Dark</span>
     </button>
-
   </header>
 
-
   <main id="main-content">
+    <section class="home-hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Cybersecurity · Intelligence · IT</p>
 
-
-    <!-- HERO -->
-
-    <section
-      class="hero"
-      id="home"
-    >
-
-      <div class="hero-topline">
-
-        <p>
-          Cybersecurity + Intelligence Portfolio
-        </p>
-
-        <p>
-          Austin, Texas
-        </p>
-
-      </div>
-
-
-      <div class="hero-title-wrap">
-
-        <p
-          class="hero-index"
-          aria-hidden="true"
-        >
-          01
-        </p>
-
-
-        <h1>
-
-          <span>
-            Carlos
-          </span>
-
-          <span>
-            Gomez
-          </span>
-
-        </h1>
-
-      </div>
-
-
-      <div class="hero-bottom">
+        <h1>Carlos<br>Gomez</h1>
 
         <p class="hero-role">
-          Computing Applications student and
-          U.S. Army Reserve Intelligence Analyst.
+          Computing Applications student and U.S. Army Reserve
+          Intelligence Analyst.
         </p>
 
+        <p class="hero-summary">
+          I am building practical experience in security operations,
+          network analysis, cyber threat intelligence, and clear
+          technical reporting.
+        </p>
 
-        <div class="hero-introduction">
-
-          <p>
-            Focused on cybersecurity operations,
-            network analysis, cyber threat intelligence,
-            and analytical reporting.
-          </p>
-
-          <a href="#projects">
-            View projects
-            <span aria-hidden="true">↓</span>
+        <div class="hero-actions">
+          <a class="button button-primary" href="projects.html">
+            View projects <span aria-hidden="true">↗</span>
           </a>
 
+          <a class="text-link" href="resume.html">
+            Read my Resume <span aria-hidden="true">→</span>
+          </a>
         </div>
-
       </div>
 
+      <aside class="hero-profile reveal" aria-label="Current profile">
+        <div class="profile-topline">
+          <span>Profile / 001</span>
 
-      <dl class="hero-details">
-
-        <div>
-
-          <dt>
-            Education
-          </dt>
-
-          <dd>
-            Texas Tech University
-          </dd>
-
+          <span class="status">
+            <span aria-hidden="true"></span>
+            Building
+          </span>
         </div>
 
+        <div class="profile-monogram" aria-hidden="true">CG</div>
 
-        <div>
+        <dl class="profile-facts">
+          <div>
+            <dt>Location</dt>
+            <dd>Austin, Texas</dd>
+          </div>
 
-          <dt>
-            Focus
-          </dt>
+          <div>
+            <dt>Education</dt>
+            <dd>Texas Tech University</dd>
+          </div>
 
-          <dd>
-            Cybersecurity + Intelligence
-          </dd>
-
-        </div>
-
-
-        <div>
-
-          <dt>
-            Building With
-          </dt>
-
-          <dd>
-            Wireshark · Sentinel · KQL
-          </dd>
-
-        </div>
-
-      </dl>
-
+          <div>
+            <dt>Current direction</dt>
+            <dd>Cybersecurity + Intelligence</dd>
+          </div>
+        </dl>
+      </aside>
     </section>
 
-
-    <!-- PROJECTS -->
-
-    <section
-      class="projects-section"
-      id="projects"
-    >
-
-      <div class="section-intro">
-
-        <p class="section-number">
-          02 / Selected Work
-        </p>
-
+    <section class="section" id="focus">
+      <div class="section-heading reveal">
+        <p class="section-kicker">01 / Focus areas</p>
 
         <div>
+          <h2>Technical Focus</h2>
+          <p>
+            Three connected skill areas guide the work I am building
+            for this portfolio.
+          </p>
+        </div>
+      </div>
 
-          <h2>
-            Projects
-          </h2>
+      <div class="path-list">
+        <a class="path-row reveal" href="projects.html?skill=security">
+          <span class="path-number">01</span>
+
+          <div>
+            <p class="path-label">SOC · SIEM · Networks</p>
+            <h3>Security Operations</h3>
+          </div>
 
           <p>
-            Cybersecurity and intelligence projects
-            I am building for this portfolio.
+            Authentication triage, Microsoft Sentinel, KQL, Wireshark,
+            DNS, and incident documentation.
           </p>
 
-        </div>
-
-      </div>
-
-
-      <div class="project-list">
-
-
-        <!-- AUTH -->
-
-        <article class="project-row">
-
-          <p class="project-number">
-            01
-          </p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Security Operations
-            </p>
-
-            <h3>
-              Authentication Log Triage
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-            Analyze authentication events,
-            adjust failure thresholds,
-            and review the evidence behind
-            flagged activity.
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-
-              <li>
-                Authentication
-              </li>
-
-              <li>
-                Detection
-              </li>
-
-              <li>
-                Triage
-              </li>
-
-            </ul>
-
-
-            <a
-              class="coming-soon-button"
-              href="#"
-              data-coming-soon
-              aria-disabled="true"
-            >
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- SENTINEL -->
-
-        <article class="project-row">
-
-          <p class="project-number">
-            02
-          </p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Security Operations
-            </p>
-
-            <h3>
-              Microsoft Sentinel Mini SOC
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-            A Sentinel lab covering KQL exercises,
-            data connector planning,
-            detection concepts,
-            and incident documentation.
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-
-              <li>
-                Sentinel
-              </li>
-
-              <li>
-                KQL
-              </li>
-
-              <li>
-                SIEM
-              </li>
-
-            </ul>
-
-
-            <a
-              class="coming-soon-button"
-              href="#"
-              data-coming-soon
-              aria-disabled="true"
-            >
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- WIRESHARK -->
-
-        <article class="project-row">
-
-          <p class="project-number">
-            03
-          </p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Network Security
-            </p>
-
-            <h3>
-              Wireshark DNS Investigation
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-            A packet-analysis project investigating
-            failed DNS lookups using Wireshark filters,
-            packet evidence, and verification steps.
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-
-              <li>
-                Wireshark
-              </li>
-
-              <li>
-                DNS
-              </li>
-
-              <li>
-                PCAP
-              </li>
-
-            </ul>
-
-
-            <a
-              class="coming-soon-button"
-              href="#"
-              data-coming-soon
-              aria-disabled="true"
-            >
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- INTELLIGENCE -->
-
-        <article class="project-row">
-
-          <p class="project-number">
-            04
-          </p>
-
-
-          <div class="project-heading">
-
-            <p>
-              Intelligence Analysis
-            </p>
-
-            <h3>
-              Incident Brief Workbench
-            </h3>
-
-          </div>
-
-
-          <p class="project-description">
-            Organize source records,
-            assess reliability,
-            separate facts from analytical judgments,
-            and create a structured intelligence brief.
-          </p>
-
-
-          <div class="project-meta">
-
-            <ul>
-
-              <li>
-                Sources
-              </li>
-
-              <li>
-                Reliability
-              </li>
-
-              <li>
-                Briefing
-              </li>
-
-            </ul>
-
-
-            <a
-              class="coming-soon-button"
-              href="#"
-              data-coming-soon
-              aria-disabled="true"
-            >
-              Coming Soon
-            </a>
-
-          </div>
-
-        </article>
-
-      </div>
-
-
-      <div class="section-footer-link">
-
-        <a href="projects.html">
-          View full project library →
+          <span class="path-arrow" aria-hidden="true">↗</span>
         </a>
 
-      </div>
+        <a class="path-row reveal" href="projects.html?skill=intelligence">
+          <span class="path-number">02</span>
 
+          <div>
+            <p class="path-label">Research · Analysis · Reporting</p>
+            <h3>Intelligence Analysis</h3>
+          </div>
+
+          <p>
+            Source evaluation, reliability, confidence assessments,
+            threat activity, and structured briefing.
+          </p>
+
+          <span class="path-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="path-row reveal" href="projects.html?skill=coursework">
+          <span class="path-number">03</span>
+
+          <div>
+            <p class="path-label">Web · Data · Information</p>
+            <h3>Coursework</h3>
+          </div>
+
+          <p>
+            Responsive web development, information organization,
+            research, and technical project delivery.
+          </p>
+
+          <span class="path-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
     </section>
 
+    <section class="section work-section" id="selected-work">
+      <div class="section-heading reveal">
+        <p class="section-kicker">02 / Selected work</p>
 
-    <!-- ABOUT -->
-
-    <section class="about-section">
-
-      <div class="about-label">
-
-        <p class="section-number">
-          03 / About
-        </p>
-
-        <p
-          class="about-monogram"
-          aria-hidden="true"
-        >
-          CG
-        </p>
-
+        <div>
+          <h2>Current Projects</h2>
+          <p>
+            Completed coursework is live now. Cybersecurity and
+            intelligence labs are being developed next.
+          </p>
+        </div>
       </div>
 
+      <div class="work-grid">
+        <article class="work-card featured reveal">
+          <div class="work-card-top">
+            <span>Live project</span>
+            <span>Information organization</span>
+          </div>
 
-      <div class="about-main">
+          <h3>5K Preparation Knowledge Base</h3>
 
-        <h2>
-          About Me
-        </h2>
+          <p>
+            A structured collection covering running plans, strength
+            training, recovery, nutrition, and race-day preparation.
+          </p>
 
-        <p class="about-lead">
-          My background combines intelligence
-          analysis with cybersecurity.
-        </p>
+          <ul class="tag-list" aria-label="Technologies used">
+            <li>Markdown</li>
+            <li>Quartz</li>
+            <li>GitHub Pages</li>
+          </ul>
 
+          <a
+            class="card-link"
+            href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
+            target="_blank"
+            rel="noopener"
+          >
+            Open project <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-top">
+            <span>Live project</span>
+            <span>Web development</span>
+          </div>
+
+          <h3>CMPA Course Portfolio</h3>
+
+          <p>
+            Coursework demonstrating responsive layouts, navigation,
+            Git workflows, and deployment with HTML, CSS, and JavaScript.
+          </p>
+
+          <ul class="tag-list" aria-label="Technologies used">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+
+          <a
+            class="card-link"
+            href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
+            target="_blank"
+            rel="noopener"
+          >
+            Open project <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-top">
+            <span>In development</span>
+            <span>Security operations</span>
+          </div>
+
+          <h3>Microsoft Sentinel Mini SOC</h3>
+
+          <p>
+            A planned lab focused on KQL queries, detection concepts,
+            incident triage, and clear investigation notes.
+          </p>
+
+          <ul class="tag-list" aria-label="Planned technologies">
+            <li>Sentinel</li>
+            <li>KQL</li>
+            <li>SIEM</li>
+          </ul>
+
+          <button class="card-link is-disabled" type="button" disabled>
+            Coming Soon
+          </button>
+        </article>
+      </div>
+
+      <a class="wide-link reveal" href="projects.html">
+        Browse the complete project library
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <section class="section capabilities-section">
+      <div class="section-heading reveal">
+        <p class="section-kicker">03 / Capabilities</p>
+
+        <div>
+          <h2>Skills in Development</h2>
+          <p>
+            This portfolio documents both the skills I use now and the
+            technical areas I am actively developing.
+          </p>
+        </div>
+      </div>
+
+      <div class="capability-grid reveal">
+        <div>
+          <span>01</span>
+          <h3>Security</h3>
+          <p>
+            Log triage, SIEM fundamentals, packet analysis, DNS
+            investigation, evidence review.
+          </p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <h3>Intelligence</h3>
+          <p>
+            Source evaluation, analytical writing, confidence
+            assessment, briefing, information handling.
+          </p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <h3>Technical</h3>
+          <p>
+            HTML, CSS, JavaScript, Git, GitHub Pages, responsive design,
+            documentation.
+          </p>
+        </div>
+
+        <div>
+          <span>04</span>
+          <h3>Operations</h3>
+          <p>
+            Team leadership, workflow coordination, incident reporting,
+            problem solving, bilingual communication.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band reveal">
+      <p class="section-kicker">04 / Next step</p>
+
+      <div>
+        <h2>Background and Experience</h2>
         <p>
-          I study Computing Applications at
-          Texas Tech University and serve in the
-          U.S. Army Reserve as an Intelligence Analyst.
-          My current technical work focuses on
-          security investigations, network evidence,
-          source evaluation, and analytical reporting.
+          Review my education, professional experience, technical
+          training, and current skill development.
         </p>
-
       </div>
 
-
-      <dl class="about-details">
-
-        <div>
-
-          <dt>
-            Education
-          </dt>
-
-          <dd>
-            B.S. Computing Applications
-          </dd>
-
-        </div>
-
-
-        <div>
-
-          <dt>
-            Military
-          </dt>
-
-          <dd>
-            Intelligence Analyst · 35F
-          </dd>
-
-        </div>
-
-
-        <div>
-
-          <dt>
-            Security
-          </dt>
-
-          <dd>
-            SOC · Network Security · CTI
-          </dd>
-
-        </div>
-
-
-        <div>
-
-          <dt>
-            Languages
-          </dt>
-
-          <dd>
-            English · Spanish
-          </dd>
-
-        </div>
-
-      </dl>
-
+      <a class="button button-light" href="resume.html">
+        View Resume <span aria-hidden="true">→</span>
+      </a>
     </section>
-
-
-    <!-- CURRENT WORK -->
-
-    <section class="next-section">
-
-      <div class="section-intro">
-
-        <p class="section-number">
-          04 / In Progress
-        </p>
-
-
-        <div>
-
-          <h2>
-            Current Work
-          </h2>
-
-          <p>
-            Additional cybersecurity and intelligence
-            projects planned for the portfolio.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <ol class="next-list">
-
-        <li>
-
-          <span>
-            01
-          </span>
-
-          <h3>
-            Cyber Incident Intelligence Brief
-          </h3>
-
-          <p>
-            A cyber intelligence brief combining
-            technical indicators, confidence levels,
-            intelligence gaps, and impact assessment.
-          </p>
-
-          <a
-            class="coming-soon-button"
-            href="#"
-            data-coming-soon
-            aria-disabled="true"
-          >
-            Coming Soon
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <span>
-            02
-          </span>
-
-          <h3>
-            Adversary Activity Matrix
-          </h3>
-
-          <p>
-            Map observed activity to MITRE ATT&amp;CK
-            techniques and document confidence,
-            evidence, and collection gaps.
-          </p>
-
-          <a
-            class="coming-soon-button"
-            href="#"
-            data-coming-soon
-            aria-disabled="true"
-          >
-            Coming Soon
-          </a>
-
-        </li>
-
-
-        <li>
-
-          <span>
-            03
-          </span>
-
-          <h3>
-            Sentinel Detection Lab
-          </h3>
-
-          <p>
-            Expand the Sentinel project with
-            detection rules, KQL queries,
-            investigation notes, and alert triage.
-          </p>
-
-          <a
-            class="coming-soon-button"
-            href="#"
-            data-coming-soon
-            aria-disabled="true"
-          >
-            Coming Soon
-          </a>
-
-        </li>
-
-      </ol>
-
-    </section>
-
   </main>
 
+  <footer class="site-footer">
+    <p>Carlos Gomez <span>/</span> Austin, Texas</p>
 
-  <footer>
-
-    <p>
-      <strong>
-        Carlos Gomez
-      </strong>
-      / Cybersecurity + Intelligence
-    </p>
-
-    <a href="#home">
-      Back to top ↑
+    <a href="#main-content">
+      Back to top <span aria-hidden="true">↑</span>
     </a>
-
   </footer>
-
 </body>
 </html>
