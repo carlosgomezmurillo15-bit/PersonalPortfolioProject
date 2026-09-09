@@ -1,19 +1,581 @@
-<footer class="site-footer">
-  <div class="footer-identity">
-    <p>Carlos Gomez <span>/</span> Project Library</p>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="footer-contact">
-      <a href="mailto:carlosdoescommerce@gmail.com">
-        carlosdoescommerce@gmail.com
-      </a>
+  <meta
+    name="description"
+    content="Cybersecurity, intelligence analysis, and coursework projects by Carlos Gomez."
+  >
 
-      <a href="tel:+17377037629">
-        737-703-7629
-      </a>
-    </div>
-  </div>
+  <title>Projects | Carlos Gomez</title>
 
-  <a href="#main-content">
-    Back to top <span aria-hidden="true">↑</span>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">
+    Skip to content
   </a>
-</footer>
+
+  <header class="site-header">
+    <a
+      class="wordmark"
+      href="index.html"
+      aria-label="Carlos Gomez home"
+    >
+      <span class="wordmark-mark" aria-hidden="true">CG</span>
+      <span class="wordmark-text">Carlos Gomez</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="resume.html" data-nav="resume">Resume</a>
+    </nav>
+
+    <button
+      class="theme-button"
+      id="theme-button"
+      type="button"
+      aria-label="Switch to dark theme"
+    >
+      <span class="theme-dot" aria-hidden="true"></span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero reveal">
+      <p class="eyebrow">
+        Project library
+      </p>
+
+      <div class="page-hero-grid">
+        <h1>Projects</h1>
+
+        <p>
+          Work is organized by skill area so employers and classmates
+          can quickly find the type of project they want to review.
+        </p>
+      </div>
+    </section>
+
+    <section class="section project-library">
+      <div class="section-heading compact reveal">
+        <p class="section-kicker">
+          1 / Select an area
+        </p>
+
+        <div>
+          <h2>Project Categories</h2>
+
+          <p>
+            Choose one category below. This interactive filter was
+            created for Exercise 04.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="filter-panel reveal"
+        aria-label="Filter projects by skill area"
+      >
+        <div
+          class="project-filters"
+          role="group"
+          aria-label="Project categories"
+        >
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="security"
+            aria-pressed="true"
+          >
+            <span>1</span>
+            Security Operations
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="intelligence"
+            aria-pressed="false"
+          >
+            <span>2</span>
+            Intelligence
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="coursework"
+            aria-pressed="false"
+          >
+            <span>3</span>
+            Coursework
+          </button>
+        </div>
+
+        <p
+          class="filter-status"
+          id="filter-status"
+          aria-live="polite"
+        >
+          Showing Security Operations · 3 projects
+        </p>
+      </div>
+
+      <div
+        class="project-collection"
+        id="project-collection"
+      >
+        <article
+          class="library-project reveal"
+          data-category="security"
+        >
+          <div class="project-index">
+            <span>SEC</span>
+            <strong>1</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Security Operations</p>
+            <h3>Authentication Log Triage</h3>
+          </div>
+
+          <p class="project-description">
+            Analyze authentication events, adjust failure thresholds,
+            identify suspicious patterns, and document the evidence
+            behind each decision.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>Authentication</li>
+            <li>Detection</li>
+            <li>Triage</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="security"
+        >
+          <div class="project-index">
+            <span>SEC</span>
+            <strong>2</strong>
+          </div>
+
+          <div class="project-title">
+            <p>SIEM</p>
+            <h3>Microsoft Sentinel Mini SOC</h3>
+          </div>
+
+          <p class="project-description">
+            Build a guided Sentinel lab with KQL exercises, connector
+            planning, detection concepts, alert triage, and incident
+            documentation.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>Sentinel</li>
+            <li>KQL</li>
+            <li>SIEM</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="security"
+        >
+          <div class="project-index">
+            <span>SEC</span>
+            <strong>3</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Network Security</p>
+            <h3>Wireshark DNS Investigation</h3>
+          </div>
+
+          <p class="project-description">
+            Investigate failed DNS lookups using packet captures,
+            Wireshark display filters, packet evidence, and repeatable
+            verification steps.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>Wireshark</li>
+            <li>DNS</li>
+            <li>PCAP</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="intelligence"
+          hidden
+        >
+          <div class="project-index">
+            <span>INT</span>
+            <strong>1</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Intelligence Analysis</p>
+            <h3>Incident Brief Workbench</h3>
+          </div>
+
+          <p class="project-description">
+            Organize source records, assess reliability, separate
+            confirmed facts from analytical judgments, and produce a
+            structured brief.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>Sources</li>
+            <li>Reliability</li>
+            <li>Reporting</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="intelligence"
+          hidden
+        >
+          <div class="project-index">
+            <span>INT</span>
+            <strong>2</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Cyber Threat Intelligence</p>
+            <h3>Cyber Incident Intelligence Brief</h3>
+          </div>
+
+          <p class="project-description">
+            Combine technical indicators, intelligence gaps, confidence
+            levels, and impact assessment in a concise cyber
+            intelligence product.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>CTI</li>
+            <li>Confidence</li>
+            <li>Risk</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="intelligence"
+          hidden
+        >
+          <div class="project-index">
+            <span>INT</span>
+            <strong>3</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Cyber Threat Intelligence</p>
+            <h3>Adversary Activity Matrix</h3>
+          </div>
+
+          <p class="project-description">
+            Map observed behaviors to MITRE ATT&amp;CK techniques while
+            documenting supporting evidence, confidence, and collection
+            gaps.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>MITRE ATT&amp;CK</li>
+            <li>TTPs</li>
+            <li>Analysis</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="coursework"
+          hidden
+        >
+          <div class="project-index">
+            <span>CRS</span>
+            <strong>1</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Information Organization</p>
+            <h3>5K Preparation Knowledge Base</h3>
+          </div>
+
+          <p class="project-description">
+            A structured information collection covering training
+            plans, recovery, nutrition, strength work, and race
+            preparation.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Technologies used"
+          >
+            <li>Markdown</li>
+            <li>Quartz</li>
+            <li>GitHub Pages</li>
+          </ul>
+
+          <a
+            class="project-action"
+            href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
+            target="_blank"
+            rel="noopener"
+          >
+            Open project ↗
+          </a>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="coursework"
+          hidden
+        >
+          <div class="project-index">
+            <span>CRS</span>
+            <strong>2</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Web Development</p>
+            <h3>CMPA Course Portfolio</h3>
+          </div>
+
+          <p class="project-description">
+            HTML, CSS, and JavaScript coursework covering responsive
+            layouts, navigation, Git workflows, and deployment.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Technologies used"
+          >
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+
+          <a
+            class="project-action"
+            href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
+            target="_blank"
+            rel="noopener"
+          >
+            Open project ↗
+          </a>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="coursework"
+          hidden
+        >
+          <div class="project-index">
+            <span>CRS</span>
+            <strong>3</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Information Curation</p>
+            <h3>Army Technology Career Guide</h3>
+          </div>
+
+          <p class="project-description">
+            A planned resource focused on technology education,
+            certifications, military benefits, and cybersecurity career
+            pathways.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Planned skills"
+          >
+            <li>Research</li>
+            <li>Curation</li>
+            <li>Web</li>
+          </ul>
+
+          <button
+            class="project-action is-disabled"
+            type="button"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </article>
+
+        <article
+          class="library-project reveal"
+          data-category="coursework"
+          hidden
+        >
+          <div class="project-index">
+            <span>CRS</span>
+            <strong>4</strong>
+          </div>
+
+          <div class="project-title">
+            <p>Intelligence Coursework</p>
+            <h3>Modernizing Military Intelligence</h3>
+          </div>
+
+          <p class="project-description">
+            Academic analysis of the Army's transition toward
+            data-driven, technology-enabled intelligence operations.
+          </p>
+
+          <ul
+            class="tag-list"
+            aria-label="Skills used"
+          >
+            <li>Research</li>
+            <li>Intelligence</li>
+            <li>Briefing</li>
+          </ul>
+
+          <span class="project-action is-label">
+            Coursework
+          </span>
+        </article>
+      </div>
+
+      <noscript>
+        <p class="noscript-note">
+          JavaScript is required to use the project-category filter.
+        </p>
+      </noscript>
+    </section>
+
+    <section class="contact-band reveal">
+      <p class="section-kicker">
+        2 / Context
+      </p>
+
+      <div>
+        <h2>Experience Behind the Work</h2>
+
+        <p>
+          Learn how my military, academic, and leadership experience
+          connects to these projects.
+        </p>
+      </div>
+
+      <a class="button button-light" href="about.html">
+        About Me
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-identity">
+      <p>
+        Carlos Gomez
+        <span>/</span>
+        Project Library
+      </p>
+
+      <div class="footer-contact">
+        <a href="mailto:carlosdoescommerce@gmail.com">
+          carlosdoescommerce@gmail.com
+        </a>
+
+        <a href="tel:+17377037629">
+          737-703-7629
+        </a>
+      </div>
+    </div>
+
+    <a href="#main-content">
+      Back to top
+      <span aria-hidden="true">↑</span>
+    </a>
+  </footer>
+</body>
+</html>
