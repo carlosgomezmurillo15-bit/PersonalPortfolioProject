@@ -1,377 +1,180 @@
-const root =
-  document.documentElement;
+document.documentElement.classList.add("js");
 
+const root = document.documentElement;
+const themeButton = document.querySelector("#theme-button");
+const themeLabel = document.querySelector("#theme-label");
 
-const themeButton =
-  document.getElementById(
-    "theme-button"
-  );
-
-
-const themeLabel =
-  document.getElementById(
-    "theme-label"
-  );
-
-
-/* =========================
-   THEME
-========================= */
-
-function getSavedTheme() {
-
+function readSavedTheme() {
   try {
-
-    return localStorage.getItem(
-      "portfolio-theme"
-    );
-
+    return localStorage.getItem("portfolio-theme");
   } catch (error) {
-
     return null;
-
   }
-
 }
-
 
 function saveTheme(theme) {
-
   try {
-
-    localStorage.setItem(
-      "portfolio-theme",
-      theme
-    );
-
+    localStorage.setItem("portfolio-theme", theme);
   } catch (error) {
-
-    // Site still works without
-    // browser storage.
-
+    // The theme still works if browser storage is unavailable.
   }
-
 }
 
+function updateThemeControl() {
+  if (!themeButton || !themeLabel) return;
 
-const savedTheme =
-  getSavedTheme();
+  const darkThemeIsActive = root.dataset.theme === "dark";
 
+  themeLabel.textContent = darkThemeIsActive ? "Light" : "Dark";
 
-if (
-  savedTheme === "dark" ||
-  savedTheme === "light"
-) {
-
-  root.dataset.theme =
-    savedTheme;
-
+  themeButton.setAttribute(
+    "aria-label",
+    darkThemeIsActive
+      ? "Switch to light theme"
+      : "Switch to dark theme"
+  );
 }
 
+const savedTheme = readSavedTheme();
 
-function updateThemeLabel() {
-
-  if (!themeLabel) {
-    return;
-  }
-
-
-  themeLabel.textContent =
-    root.dataset.theme === "dark"
-      ? "Light view"
-      : "Dark view";
-
+if (savedTheme === "light" || savedTheme === "dark") {
+  root.dataset.theme = savedTheme;
 }
 
-
-updateThemeLabel();
-
+updateThemeControl();
 
 if (themeButton) {
+  themeButton.addEventListener("click", () => {
+    const nextTheme =
+      root.dataset.theme === "dark" ? "light" : "dark";
 
-  themeButton.addEventListener(
-    "click",
-    function () {
-
-      root.dataset.theme =
-        root.dataset.theme === "dark"
-          ? "light"
-          : "dark";
-
-
-      saveTheme(
-        root.dataset.theme
-      );
-
-
-      updateThemeLabel();
-
-    }
-  );
-
+    root.dataset.theme = nextTheme;
+    saveTheme(nextTheme);
+    updateThemeControl();
+  });
 }
 
+const pageFile =
+  window.location.pathname.split("/").pop() || "index.html";
 
-/* =========================
-   ACTIVE NAVIGATION
-========================= */
-
-const currentPage =
-  window.location.pathname
-    .split("/")
-    .pop() ||
-  "index.html";
-
-
-let currentNav =
-  "home";
-
-
-if (
-  currentPage ===
-  "projects.html"
-) {
-
-  currentNav =
-    "projects";
-
-} else if (
-  currentPage ===
-  "about.html"
-) {
-
-  currentNav =
-    "about";
-
-} else if (
-  currentPage ===
-  "resume.html"
-) {
-
-  currentNav =
-    "resume";
-
-}
-
-
-document
-  .querySelectorAll(
-    "[data-nav]"
-  )
-  .forEach(
-    function (link) {
-
-      if (
-        link.dataset.nav ===
-        currentNav
-      ) {
-
-        link.classList.add(
-          "active"
-        );
-
-      }
-
-    }
-  );
-
-
-/* =========================
-   COMING SOON BUTTONS
-========================= */
-
-document
-  .querySelectorAll(
-    "[data-coming-soon]"
-  )
-  .forEach(
-    function (button) {
-
-      button.addEventListener(
-        "click",
-        function (event) {
-
-          event.preventDefault();
-
-        }
-      );
-
-    }
-  );
-
-
-/* =========================
-   PROJECT FILTERS
-========================= */
-
-const filterButtons =
-  document.querySelectorAll(
-    ".filter-button"
-  );
-
-
-const projectRows =
-  document.querySelectorAll(
-    ".project-row[data-category]"
-  );
-
-
-const filterStatus =
-  document.getElementById(
-    "filter-status"
-  );
-
-
-const categoryNames = {
-
-  security:
-    "Security Operations",
-
-  intelligence:
-    "Intelligence",
-
-  coursework:
-    "Coursework"
-
+const pageNames = {
+  "index.html": "home",
+  "projects.html": "projects",
+  "about.html": "about",
+  "resume.html": "resume"
 };
 
+const activePage = pageNames[pageFile] || "home";
+
+document.querySelectorAll("[data-nav]").forEach((link) => {
+  if (link.dataset.nav === activePage) {
+    link.classList.add("active");
+    link.setAttribute("aria-current", "page");
+  }
+});
+
+const filterButtons = [
+  ...document.querySelectorAll(".filter-button")
+];
+
+const projectRows = [
+  ...document.querySelectorAll("[data-category]")
+];
+
+const filterStatus = document.querySelector("#filter-status");
+
+const categoryDetails = {
+  security: {
+    name: "Security Operations",
+    count: 3
+  },
+  intelligence: {
+    name: "Intelligence",
+    count: 3
+  },
+  coursework: {
+    name: "Coursework",
+    count: 4
+  }
+};
 
 function showCategory(category) {
+  if (!categoryDetails[category]) return;
 
-  projectRows.forEach(
-    function (project) {
+  projectRows.forEach((project) => {
+    project.hidden = project.dataset.category !== category;
+  });
 
-      project.hidden =
-        project.dataset.category !==
-        category;
+  filterButtons.forEach((button) => {
+    const isActive = button.dataset.filter === category;
 
-    }
-  );
-
-
-  filterButtons.forEach(
-    function (button) {
-
-      const active =
-        button.dataset.filter ===
-        category;
-
-
-      button.classList.toggle(
-        "active",
-        active
-      );
-
-
-      button.setAttribute(
-        "aria-pressed",
-        active
-          ? "true"
-          : "false"
-      );
-
-    }
-  );
-
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
 
   if (filterStatus) {
+    const details = categoryDetails[category];
 
     filterStatus.textContent =
-      "Showing " +
-      categoryNames[category];
-
+      `Showing ${details.name} · ${details.count} projects`;
   }
 
+  const url = new URL(window.location.href);
+  url.searchParams.set("skill", category);
+
+  history.replaceState(
+    {},
+    "",
+    `${url.pathname}?${url.searchParams.toString()}`
+  );
 }
 
+if (filterButtons.length && projectRows.length) {
+  const requestedCategory =
+    new URLSearchParams(window.location.search).get("skill");
 
-filterButtons.forEach(
-  function (button) {
+  const startingCategory =
+    categoryDetails[requestedCategory]
+      ? requestedCategory
+      : "security";
 
-    button.addEventListener(
-      "click",
-      function () {
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      showCategory(button.dataset.filter);
+    });
+  });
 
-        const category =
-          button.dataset.filter;
+  showCategory(startingCategory);
+}
 
+const revealItems = document.querySelectorAll(".reveal");
 
-        showCategory(
-          category
-        );
-
-
-        const url =
-          new URL(
-            window.location.href
-          );
-
-
-        url.searchParams.set(
-          "skill",
-          category
-        );
-
-
-        history.replaceState(
-          {},
-          "",
-          url.pathname +
-          "?" +
-          url.searchParams.toString()
-        );
-
-      }
-    );
-
-  }
-);
-
-
-/* =========================
-   DIRECT CATEGORY LINKS
-========================= */
+const reducedMotion =
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (
-  projectRows.length > 0
+  reducedMotion ||
+  !("IntersectionObserver" in window)
 ) {
+  revealItems.forEach((item) => {
+    item.classList.add("is-visible");
+  });
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12
+    }
+  );
 
-  const params =
-    new URLSearchParams(
-      window.location.search
-    );
-
-
-  const requestedCategory =
-    params.get(
-      "skill"
-    );
-
-
-  const validCategories = [
-    "security",
-    "intelligence",
-    "coursework"
-  ];
-
-
-  if (
-    requestedCategory &&
-    validCategories.includes(
-      requestedCategory
-    )
-  ) {
-
-    showCategory(
-      requestedCategory
-    );
-
-  } else {
-
-    showCategory(
-      "security"
-    );
-
-  }
-
+  revealItems.forEach((item) => {
+    revealObserver.observe(item);
+  });
 }
