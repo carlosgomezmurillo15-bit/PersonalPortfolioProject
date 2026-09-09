@@ -31,7 +31,6 @@ html[data-theme="dark"] {
   --inverse-ink: #102117;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
 }
-
 * {
   box-sizing: border-box;
 }
