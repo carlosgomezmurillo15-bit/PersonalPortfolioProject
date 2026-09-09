@@ -1,741 +1,311 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume of Carlos Gomez, Computing Applications student and U.S. Army Reserve Intelligence Analyst.">
+  <title>Resume | Carlos Gomez</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
-  <meta
-    name="description"
-    content="Resume of Carlos Gomez."
-  >
-
-  <title>
-    Resume | Carlos Gomez
-  </title>
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-  <script
-    src="script.js"
-    defer
-  ></script>
-
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
-
 <body>
-
-  <a
-    class="skip-link"
-    href="#main-content"
-  >
-    Skip to content
-  </a>
-
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-
-    <a
-      class="wordmark"
-      href="index.html"
-    >
-
-      <span class="wordmark-initials">
-        CG
-      </span>
-
-      <span>
-        Carlos Gomez
-      </span>
-
+    <a class="wordmark" href="index.html" aria-label="Carlos Gomez home">
+      <span class="wordmark-mark" aria-hidden="true">CG</span>
+      <span class="wordmark-text">Carlos Gomez</span>
     </a>
 
-
-    <nav aria-label="Main navigation">
-
-      <a
-        href="index.html"
-        data-nav="home"
-      >
-        Home
-      </a>
-
-      <a
-        href="projects.html"
-        data-nav="projects"
-      >
-        Projects
-      </a>
-
-      <a
-        href="about.html"
-        data-nav="about"
-      >
-        About
-      </a>
-
-      <a
-        href="resume.html"
-        data-nav="resume"
-      >
-        Resume
-      </a>
-
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="resume.html" data-nav="resume">Resume</a>
     </nav>
-
 
     <button
       class="theme-button"
       id="theme-button"
       type="button"
+      aria-label="Switch to dark theme"
     >
-
-      <span
-        class="theme-symbol"
-        aria-hidden="true"
-      ></span>
-
-      <span id="theme-label">
-        Dark view
-      </span>
-
+      <span class="theme-dot" aria-hidden="true"></span>
+      <span id="theme-label">Dark</span>
     </button>
-
   </header>
 
-
   <main id="main-content">
+    <section class="page-hero resume-hero reveal">
+      <p class="eyebrow">Resume</p>
 
-
-    <section class="subpage-hero">
-
-      <div class="hero-topline">
-
-        <p>
-          Resume
-        </p>
+      <div class="page-hero-grid">
+        <h1>Carlos Gomez</h1>
 
         <p>
-          Austin, Texas
+          Cybersecurity · Intelligence Analysis · Security Operations ·
+          Technical Reporting
         </p>
-
       </div>
 
-
-      <div class="subpage-title-row">
-
-        <p class="hero-index">
-          03
-        </p>
-
-        <h1 class="subpage-title">
-          Carlos Gomez
-        </h1>
-
+      <div class="resume-contact-line">
+        <span>Austin, Texas</span>
+        <span>U.S. Army Reserve · 35F</span>
+        <span>English · Spanish</span>
       </div>
-
-
-      <div class="subpage-intro">
-
-        <p>
-          Cybersecurity · Intelligence Analysis ·
-          Security Operations · CTI
-        </p>
-
-        <p>
-          U.S. Army Reserve · 35F
-        </p>
-
-      </div>
-
     </section>
 
-
-    <!-- SUMMARY -->
-
-    <section class="resume-section">
-
-      <div class="resume-heading">
-
-        <p class="section-number">
-          01
-        </p>
-
-        <h2>
-          Summary
-        </h2>
-
-      </div>
-
-
-      <div class="resume-body">
-
-        <p class="resume-lead">
-          Computing Applications student and
-          U.S. Army Reserve Intelligence Analyst
-          building technical experience in
-          cybersecurity and intelligence analysis.
-        </p>
+    <div class="resume-layout">
+      <aside class="resume-sidebar reveal" aria-label="Resume overview">
+        <p class="section-kicker">Profile</p>
 
         <p>
-          Current areas of development include
-          authentication-log triage,
-          Microsoft Sentinel,
-          KQL,
-          Wireshark packet analysis,
-          DNS investigation,
-          source evaluation,
-          and structured analytical reporting.
+          Computing Applications student and U.S. Army Reserve
+          Intelligence Analyst developing practical cybersecurity and
+          intelligence-analysis skills.
         </p>
 
-      </div>
+        <p class="section-kicker">Core strengths</p>
 
-    </section>
+        <ul class="plain-list">
+          <li>Analytical reporting</li>
+          <li>Source evaluation</li>
+          <li>Incident documentation</li>
+          <li>Team leadership</li>
+          <li>Bilingual communication</li>
+        </ul>
 
+        <p class="section-kicker">Technical development</p>
 
-    <!-- SKILLS -->
+        <ul class="plain-list">
+          <li>Microsoft Sentinel</li>
+          <li>KQL fundamentals</li>
+          <li>Wireshark</li>
+          <li>DNS analysis</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Git and GitHub Pages</li>
+        </ul>
+      </aside>
 
-    <section class="resume-section">
-
-      <div class="resume-heading">
-
-        <p class="section-number">
-          02
-        </p>
-
-        <h2>
-          Skills
-        </h2>
-
-      </div>
-
-
-      <div class="resume-skills-grid">
-
-        <div>
-
-          <span>
-            Security Operations
-          </span>
-
-          <p>
-            Authentication log triage
-          </p>
-
-          <p>
-            Microsoft Sentinel
-          </p>
-
-          <p>
-            KQL fundamentals
-          </p>
-
-          <p>
-            Detection concepts
-          </p>
-
-          <p>
-            Incident documentation
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            Network Security
-          </span>
-
-          <p>
-            Wireshark
-          </p>
-
-          <p>
-            Packet analysis
-          </p>
-
-          <p>
-            DNS investigation
-          </p>
-
-          <p>
-            Networking fundamentals
-          </p>
-
-          <p>
-            Evidence verification
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            Intelligence
-          </span>
-
-          <p>
-            Source evaluation
-          </p>
-
-          <p>
-            Reliability assessment
-          </p>
-
-          <p>
-            Analytical writing
-          </p>
-
-          <p>
-            Confidence assessment
-          </p>
-
-          <p>
-            Briefing
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-
-    <section class="resume-section">
-
-      <div class="resume-heading">
-
-        <p class="section-number">
-          03
-        </p>
-
-        <h2>
-          Experience
-        </h2>
-
-      </div>
-
-
-      <div class="resume-body">
-
-
-        <article class="resume-entry">
-
-          <div class="resume-date">
-            2025 — Present
+      <div class="resume-main">
+        <section class="resume-section reveal">
+          <div class="resume-section-title">
+            <span>01</span>
+            <h2>Summary</h2>
           </div>
 
-
-          <div>
-
-            <p class="resume-org">
-              United States Army Reserve
+          <div class="resume-section-content">
+            <p class="large-copy">
+              Intelligence and operations experience supported by
+              growing technical skills in cybersecurity, networking,
+              data, and web development.
             </p>
-
-            <h3>
-              Intelligence Analyst · 35F
-            </h3>
-
-            <ul>
-
-              <li>
-                Support intelligence work through
-                research, information management,
-                analytical reporting, and briefing preparation.
-              </li>
-
-              <li>
-                Evaluate information for relevance
-                and reliability and identify
-                information gaps.
-              </li>
-
-              <li>
-                Communicate supported findings
-                through structured written
-                and verbal products.
-              </li>
-
-            </ul>
-
-          </div>
-
-        </article>
-
-
-        <article class="resume-entry">
-
-          <div class="resume-date">
-            2025
-          </div>
-
-
-          <div>
-
-            <p class="resume-org">
-              United Protective Services
-            </p>
-
-            <h3>
-              Security Officer
-            </h3>
-
-            <ul>
-
-              <li>
-                Monitored access activity,
-                alarms, safety conditions,
-                and security concerns.
-              </li>
-
-              <li>
-                Prepared incident reports
-                and daily activity documentation.
-              </li>
-
-              <li>
-                Coordinated with property personnel
-                and responders during incidents.
-              </li>
-
-            </ul>
-
-          </div>
-
-        </article>
-
-
-        <article class="resume-entry">
-
-          <div class="resume-date">
-            2020 — 2023
-          </div>
-
-
-          <div>
-
-            <p class="resume-org">
-              Walmart
-            </p>
-
-            <h3>
-              Digital Fulfillment Team Lead
-            </h3>
-
-            <ul>
-
-              <li>
-                Led daily digital fulfillment operations
-                for a high-volume team.
-              </li>
-
-              <li>
-                Coordinated workflow,
-                trained employees,
-                and resolved operational problems.
-              </li>
-
-            </ul>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-
-    <section class="resume-section">
-
-      <div class="resume-heading">
-
-        <p class="section-number">
-          04
-        </p>
-
-        <h2>
-          Education
-        </h2>
-
-      </div>
-
-
-      <div class="resume-body">
-
-
-        <article class="resume-entry">
-
-          <div class="resume-date">
-            Expected 2026
-          </div>
-
-
-          <div>
-
-            <p class="resume-org">
-              Texas Tech University
-            </p>
-
-            <h3>
-              B.S. Computing Applications
-            </h3>
 
             <p>
-              Computing technologies,
-              web development,
-              information organization,
-              product design,
-              and technical project work.
+              Current areas of development include authentication-log
+              triage, Microsoft Sentinel, KQL, Wireshark packet
+              analysis, DNS investigation, source evaluation, and
+              structured analytical reporting.
             </p>
+          </div>
+        </section>
 
+        <section class="resume-section reveal">
+          <div class="resume-section-title">
+            <span>02</span>
+            <h2>Experience</h2>
           </div>
 
-        </article>
+          <div class="resume-section-content timeline">
+            <article class="timeline-entry">
+              <p class="timeline-date">2025 — Present</p>
 
+              <div>
+                <p class="timeline-org">United States Army Reserve</p>
+                <h3>Intelligence Analyst · 35F</h3>
 
-        <article class="resume-entry">
+                <ul>
+                  <li>
+                    Support intelligence work through research,
+                    information management, analytical reporting, and
+                    briefing preparation.
+                  </li>
+                  <li>
+                    Evaluate information for relevance and reliability
+                    while identifying gaps that require additional
+                    collection.
+                  </li>
+                  <li>
+                    Communicate supported findings through structured
+                    written and verbal products.
+                  </li>
+                </ul>
+              </div>
+            </article>
 
-          <div class="resume-date">
-            2026
+            <article class="timeline-entry">
+              <p class="timeline-date">2025</p>
+
+              <div>
+                <p class="timeline-org">United Protective Services</p>
+                <h3>Security Officer</h3>
+
+                <ul>
+                  <li>
+                    Monitored access activity, alarms, safety
+                    conditions, and security concerns.
+                  </li>
+                  <li>
+                    Prepared incident reports and daily activity
+                    documentation.
+                  </li>
+                  <li>
+                    Coordinated with property personnel and responders
+                    during incidents.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-entry">
+              <p class="timeline-date">2020 — 2023</p>
+
+              <div>
+                <p class="timeline-org">Walmart</p>
+                <h3>Digital Fulfillment Team Lead</h3>
+
+                <ul>
+                  <li>
+                    Led daily digital fulfillment operations for a
+                    high-volume team.
+                  </li>
+                  <li>
+                    Coordinated workflow, trained employees, and
+                    resolved operational problems.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="resume-section reveal">
+          <div class="resume-section-title">
+            <span>03</span>
+            <h2>Education</h2>
           </div>
 
+          <div class="resume-section-content timeline">
+            <article class="timeline-entry compact-entry">
+              <p class="timeline-date">Expected 2026</p>
 
-          <div>
+              <div>
+                <p class="timeline-org">Texas Tech University</p>
+                <h3>B.S. Computing Applications</h3>
 
-            <p class="resume-org">
-              Cochise College
-            </p>
+                <p>
+                  Computing technologies, web development, information
+                  organization, product design, and technical project
+                  work.
+                </p>
+              </div>
+            </article>
 
-            <h3>
-              A.A.S. Intelligence Operations Studies
-            </h3>
+            <article class="timeline-entry compact-entry">
+              <p class="timeline-date">2026</p>
 
+              <div>
+                <p class="timeline-org">Cochise College</p>
+                <h3>A.A.S. Intelligence Operations Studies</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="resume-section reveal">
+          <div class="resume-section-title">
+            <span>04</span>
+            <h2>Training</h2>
           </div>
 
-        </article>
+          <div class="resume-section-content credential-list">
+            <div>
+              <span>01</span>
+              <strong>U.S. Army Intelligence Analyst Training</strong>
+            </div>
 
+            <div>
+              <span>02</span>
+              <strong>Google Data Analytics</strong>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>Google Project Management</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="resume-section reveal">
+          <div class="resume-section-title">
+            <span>05</span>
+            <h2>Projects</h2>
+          </div>
+
+          <div class="resume-section-content resume-projects">
+            <a
+              href="https://carlosgomezmurillo15-bit.github.io/gomezknowledgebase/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Live</span>
+              <strong>5K Preparation Knowledge Base</strong>
+              <small>Information Organization</small>
+              <b aria-hidden="true">↗</b>
+            </a>
+
+            <a
+              href="https://carlosgomezmurillo15-bit.github.io/yourcourseportfolioCAG1/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Live</span>
+              <strong>CMPA Course Portfolio</strong>
+              <small>Web Development</small>
+              <b aria-hidden="true">↗</b>
+            </a>
+
+            <div>
+              <span>Planned</span>
+              <strong>Microsoft Sentinel Mini SOC</strong>
+              <small>Security Operations</small>
+              <em>Coming Soon</em>
+            </div>
+
+            <div>
+              <span>Planned</span>
+              <strong>Incident Brief Workbench</strong>
+              <small>Intelligence Analysis</small>
+              <em>Coming Soon</em>
+            </div>
+          </div>
+        </section>
       </div>
-
-    </section>
-
-
-    <!-- TRAINING -->
-
-    <section class="resume-section">
-
-      <div class="resume-heading">
-
-        <p class="section-number">
-          05
-        </p>
-
-        <h2>
-          Training
-        </h2>
-
-      </div>
-
-
-      <div class="credential-list">
-
-        <div>
-
-          <span>
-            01
-          </span>
-
-          <strong>
-            U.S. Army Intelligence Analyst Training
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            02
-          </span>
-
-          <strong>
-            Google Data Analytics
-          </strong>
-
-        </div>
-
-
-        <div>
-
-          <span>
-            03
-          </span>
-
-          <strong>
-            Google Project Management
-          </strong>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section class="resume-section">
-
-      <div class="resume-heading">
-
-        <p class="section-number">
-          06
-        </p>
-
-        <h2>
-          Projects
-        </h2>
-
-      </div>
-
-
-      <div class="resume-project-list">
-
-        <a href="projects.html?skill=security">
-
-          <span>
-            01
-          </span>
-
-          <strong>
-            Authentication Log Triage
-          </strong>
-
-          <small>
-            Security Operations
-          </small>
-
-          <b>
-            →
-          </b>
-
-        </a>
-
-
-        <a href="projects.html?skill=security">
-
-          <span>
-            02
-          </span>
-
-          <strong>
-            Microsoft Sentinel Mini SOC
-          </strong>
-
-          <small>
-            SIEM
-          </small>
-
-          <b>
-            →
-          </b>
-
-        </a>
-
-
-        <a href="projects.html?skill=security">
-
-          <span>
-            03
-          </span>
-
-          <strong>
-            Wireshark DNS Investigation
-          </strong>
-
-          <small>
-            Network Security
-          </small>
-
-          <b>
-            →
-          </b>
-
-        </a>
-
-
-        <a href="projects.html?skill=intelligence">
-
-          <span>
-            04
-          </span>
-
-          <strong>
-            Incident Brief Workbench
-          </strong>
-
-          <small>
-            Intelligence Analysis
-          </small>
-
-          <b>
-            →
-          </b>
-
-        </a>
-
-      </div>
-
-    </section>
-
+    </div>
   </main>
 
-
-  <footer>
-
-    <p>
-      <strong>
-        Carlos Gomez
-      </strong>
-      / Resume
-    </p>
+  <footer class="site-footer">
+    <p>Carlos Gomez <span>/</span> Resume</p>
 
     <a href="projects.html">
-      Projects →
+      View projects <span aria-hidden="true">→</span>
     </a>
-
   </footer>
-
 </body>
 </html>
