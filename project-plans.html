@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Planned cybersecurity and intelligence projects by Carlos Gomez, with objectives, methods, and expected deliverables.">
+  <title>Project Plans | Carlos Gomez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Carlos Gomez home"><span class="wordmark-mark" aria-hidden="true">CG</span><span class="wordmark-text">Carlos Gomez</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="resume.html" data-nav="resume">Resume</a>
+    </nav>
+    <button class="theme-button" id="theme-button" type="button" aria-label="Switch to dark theme"><span class="theme-dot" aria-hidden="true"></span><span id="theme-label">Dark</span></button>
+  </header>
+  <main id="main-content">
+    <article class="case-study">
+      <header class="case-hero reveal">
+        <a class="case-back" href="projects.html">← Back to projects</a>
+        <p class="eyebrow">Work in development</p>
+        <div class="case-hero-grid"><div>
+          <h1>Project Plans</h1>
+          <p class="case-intro">These are the labs and analytical products I want to build next. The outlines below describe the work I intend to do. I will add results, screenshots, and full case studies only after I complete and verify each project.</p>
+        </div><div class="case-number" aria-hidden="true">4</div></div>
+        <nav class="plan-jump" aria-label="Project plans">
+          <a href="#authentication">Authentication logs</a>
+          <a href="#sentinel">Sentinel SOC</a>
+          <a href="#wireshark">DNS investigation</a>
+          <a href="#incident-brief">Incident brief</a>
+        </nav>
+      </header>
+
+      <section class="case-section plan-section reveal" id="authentication" aria-labelledby="authentication-title">
+        <div class="case-section-label"><span>1</span><p>Security operations</p></div>
+        <div class="case-section-content">
+          <div class="plan-heading"><h2 id="authentication-title">Authentication Log Triage</h2><span class="status-label">Coming Soon</span></div>
+          <p class="case-lead">I want to examine sign-in activity and decide which patterns deserve further investigation.</p>
+          <dl class="plan-details">
+            <div><dt>Plan</dt><dd>Use a safe, synthetic set of authentication events. Compare failures, successful logins, account names, times, and source addresses to distinguish ordinary mistakes from unusual sequences. Record the rule behind every finding.</dd></div>
+            <div><dt>What I will show</dt><dd>A documented dataset, queries or spreadsheet analysis, a short triage log, and a conclusion that separates evidence from assumptions.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="case-section plan-section reveal" id="sentinel" aria-labelledby="sentinel-title">
+        <div class="case-section-label"><span>2</span><p>Security operations</p></div>
+        <div class="case-section-content">
+          <div class="plan-heading"><h2 id="sentinel-title">Microsoft Sentinel Mini SOC</h2><span class="status-label">Coming Soon</span></div>
+          <p class="case-lead">This lab will show how a small security monitoring workflow can move from an event to a documented decision.</p>
+          <dl class="plan-details">
+            <div><dt>Plan</dt><dd>Set up an authorized practice environment, ingest sample security events, write and explain KQL queries, create a simple detection, and walk through alert triage. I will keep lab data separate from any real account or organization.</dd></div>
+            <div><dt>What I will show</dt><dd>An environment diagram, redacted screenshots, KQL examples, a detection rationale, an investigation timeline, and a brief incident summary. Cloud setup and cost will determine the exact lab scope.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="case-section plan-section reveal" id="wireshark" aria-labelledby="wireshark-title">
+        <div class="case-section-label"><span>3</span><p>Network security</p></div>
+        <div class="case-section-content">
+          <div class="plan-heading"><h2 id="wireshark-title">Wireshark DNS Investigation</h2><span class="status-label">Coming Soon</span></div>
+          <p class="case-lead">I plan to troubleshoot a controlled DNS problem by following the packets rather than guessing at the cause.</p>
+          <dl class="plan-details">
+            <div><dt>Plan</dt><dd>Capture traffic from my own lab or use a permitted sample PCAP, filter DNS requests and responses, identify failed lookups or unexpected answers, and test an explanation against the packet evidence.</dd></div>
+            <div><dt>What I will show</dt><dd>Display filters, annotated packet screenshots, a short sequence of events, a conclusion, and the steps another person could use to repeat the analysis.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="case-section plan-section reveal" id="incident-brief" aria-labelledby="incident-brief-title">
+        <div class="case-section-label"><span>4</span><p>Intelligence analysis</p></div>
+        <div class="case-section-content">
+          <div class="plan-heading"><h2 id="incident-brief-title">Incident Brief Workbench</h2><span class="status-label">Coming Soon</span></div>
+          <p class="case-lead">I want to demonstrate how I turn scattered public information into a brief that someone can actually use.</p>
+          <dl class="plan-details">
+            <div><dt>Plan</dt><dd>Choose a public, unclassified cyber incident; collect reliable open sources; build a timeline; distinguish confirmed facts from reporting and interpretation; and state confidence and unanswered questions.</dd></div>
+            <div><dt>What I will show</dt><dd>A source table, incident timeline, concise written brief, citations, and a note explaining where the evidence is limited. No classified or private operational information will be used.</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <aside class="case-next reveal" aria-label="Completed work">
+        <div><p class="section-kicker">Completed case study</p><h2>5K Preparation Knowledge Base</h2></div>
+        <a class="button button-light" href="knowledge-base-case-study.html">Read case study <span aria-hidden="true">→</span></a>
+      </aside>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-identity"><p>Carlos Gomez <span>/</span> Project Plans</p><div class="footer-contact"><a href="mailto:carlosdoescommerce@gmail.com">carlosdoescommerce@gmail.com</a><a href="tel:+17377037629">737-703-7629</a></div></div><a href="#main-content">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
